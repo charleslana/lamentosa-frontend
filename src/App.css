@@ -1,38 +1,315 @@
-.App {
+header {
+  width: 100%;
+  height: 20rem;
+  background-image: url(images/layout/header_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -50px;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/layout/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  z-index: 1;
+}
+
+nav a {
+  padding: 2rem;
+  background-color: #1a1b1e;
+  font-size: 0.8rem;
+}
+
+nav a:hover {
+  border-top: 1px solid white;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.m-auto {
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.tops-vampire {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tops-vampire li {
+  padding: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.frame-character {
+  width: 148px;
+  height: 246px;
+  background-image: url(images/layout/frame_character.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0.3rem;
+}
+
+.circle-vampire {
+  width: 148px;
+  height: 174px;
+  background-image: url(images/layout/circle_vampire.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+
+.frame-avatar {
+  width: 148px;
+  height: 148px;
+  background-image: url(images/avatar/vampire/male/1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.avatar-vampire-male-1 {
+  background-image: url(images/avatar/vampire/male/1.jpg);
+}
+
+.avatar-vampire-male-2 {
+  background-image: url(images/avatar/vampire/male/2.jpg);
+}
+
+.avatar-vampire-male-3 {
+  background-image: url(images/avatar/vampire/male/3.jpg);
+}
+
+.avatar-vampire-male-4 {
+  background-image: url(images/avatar/vampire/male/4.jpg);
+}
+
+.avatar-vampire-male-5 {
+  background-image: url(images/avatar/vampire/male/5.jpg);
+}
+
+.avatar-vampire-male-6 {
+  background-image: url(images/avatar/vampire/male/6.jpg);
+}
+
+.avatar-vampire-male-7 {
+  background-image: url(images/avatar/vampire/male/7.jpg);
+}
+
+.avatar-vampire-male-8 {
+  background-image: url(images/avatar/vampire/male/8.jpg);
+}
+
+.avatar-vampire-male-9 {
+  background-image: url(images/avatar/vampire/male/9.jpg);
+}
+
+.avatar-vampire-male-10 {
+  background-image: url(images/avatar/vampire/male/10.jpg);
+}
+
+.avatar-vampire-male-11 {
+  background-image: url(images/avatar/vampire/male/11.jpg);
+}
+
+.avatar-vampire-male-12 {
+  background-image: url(images/avatar/vampire/male/12.jpg);
+}
+
+.avatar-vampire-female-1 {
+  background-image: url(images/avatar/vampire/female/1.jpg);
+}
+
+.avatar-vampire-female-2 {
+  background-image: url(images/avatar/vampire/female/2.jpg);
+}
+
+.avatar-vampire-female-3 {
+  background-image: url(images/avatar/vampire/female/3.jpg);
+}
+
+.avatar-vampire-female-4 {
+  background-image: url(images/avatar/vampire/female/4.jpg);
+}
+
+.avatar-vampire-female-5 {
+  background-image: url(images/avatar/vampire/female/5.jpg);
+}
+
+.avatar-vampire-female-6 {
+  background-image: url(images/avatar/vampire/female/6.jpg);
+}
+
+.avatar-vampire-female-7 {
+  background-image: url(images/avatar/vampire/female/7.jpg);
+}
+
+.avatar-vampire-female-8 {
+  background-image: url(images/avatar/vampire/female/8.jpg);
+}
+
+.avatar-vampire-female-9 {
+  background-image: url(images/avatar/vampire/female/9.jpg);
+}
+
+.avatar-vampire-female-10 {
+  background-image: url(images/avatar/vampire/female/10.jpg);
+}
+
+.avatar-vampire-female-11 {
+  background-image: url(images/avatar/vampire/female/11.jpg);
+}
+
+.avatar-vampire-female-12 {
+  background-image: url(images/avatar/vampire/female/12.jpg);
+}
+
+.avatar-werewolf-male-1 {
+  background-image: url(images/avatar/werewolf/male/1.jpg);
+}
+
+.avatar-werewolf-male-2 {
+  background-image: url(images/avatar/werewolf/male/2.jpg);
+}
+
+.avatar-werewolf-male-3 {
+  background-image: url(images/avatar/werewolf/male/3.jpg);
+}
+
+.avatar-werewolf-male-4 {
+  background-image: url(images/avatar/werewolf/male/4.jpg);
+}
+
+.avatar-werewolf-male-5 {
+  background-image: url(images/avatar/werewolf/male/5.jpg);
+}
+
+.avatar-werewolf-male-6 {
+  background-image: url(images/avatar/werewolf/male/6.jpg);
+}
+
+.avatar-werewolf-male-7 {
+  background-image: url(images/avatar/werewolf/male/7.jpg);
+}
+
+.avatar-werewolf-male-8 {
+  background-image: url(images/avatar/werewolf/male/8.jpg);
+}
+
+.avatar-werewolf-male-9 {
+  background-image: url(images/avatar/werewolf/male/9.jpg);
+}
+
+.avatar-werewolf-male-10 {
+  background-image: url(images/avatar/werewolf/male/10.jpg);
+}
+
+.avatar-werewolf-male-11 {
+  background-image: url(images/avatar/werewolf/male/11.jpg);
+}
+
+.avatar-werewolf-male-12 {
+  background-image: url(images/avatar/werewolf/male/12.jpg);
+}
+
+.avatar-werewolf-female-1 {
+  background-image: url(images/avatar/werewolf/female/1.jpg);
+}
+
+.avatar-werewolf-female-2 {
+  background-image: url(images/avatar/werewolf/female/2.jpg);
+}
+
+.avatar-werewolf-female-3 {
+  background-image: url(images/avatar/werewolf/female/3.jpg);
+}
+
+.avatar-werewolf-female-4 {
+  background-image: url(images/avatar/werewolf/female/4.jpg);
+}
+
+.avatar-werewolf-female-5 {
+  background-image: url(images/avatar/werewolf/female/5.jpg);
+}
+
+.avatar-werewolf-female-6 {
+  background-image: url(images/avatar/werewolf/female/6.jpg);
+}
+
+.avatar-werewolf-female-7 {
+  background-image: url(images/avatar/werewolf/female/7.jpg);
+}
+
+.avatar-werewolf-female-8 {
+  background-image: url(images/avatar/werewolf/female/8.jpg);
+}
+
+.avatar-werewolf-female-9 {
+  background-image: url(images/avatar/werewolf/female/9.jpg);
+}
+
+.avatar-werewolf-female-10 {
+  background-image: url(images/avatar/werewolf/female/10.jpg);
+}
+
+.avatar-werewolf-female-11 {
+  background-image: url(images/avatar/werewolf/female/11.jpg);
+}
+
+.avatar-werewolf-female-12 {
+  background-image: url(images/avatar/werewolf/female/12.jpg);
+}
+
+.frame-level {
+  position: absolute;
+  bottom: 29px;
+  right: 32px;
+  text-align: center;
+  width: 18px;
+}
+
+.frame-name {
+  width: 148px;
+  text-align: center;
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-top: 8px;
+  overflow-wrap: break-word;
+  color: #9c5f23;
+  font-family: 'Cinzel Decorative', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.name-color-1 {
+  color: #2bd7d9;
+}
+
+.name-color-2 {
+  color: #a60f93;
+}
+
+.frame-bar-life {
+  width: 115px;
+  height: 25px;
+  background-image: url(images/layout/red_bar.png);
+  background-repeat: no-repeat;
+  margin-left: 17px;
+  line-height: 2;
+  text-align: center;
 }
