@@ -3,6 +3,7 @@ import ITopPlayersVampires from '../interfaces/ITopPlayersVampires';
 import NavBarOff from '../../../shared/components/NavBarOff';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../../../shared/components/Footer';
 
 function HomePage() {
   const topPlayersVampires: ITopPlayersVampires[] = [
@@ -195,6 +196,7 @@ function HomePage() {
           ))}
         </div>
       </main>
+      <Footer />
     </>
   );
 }
