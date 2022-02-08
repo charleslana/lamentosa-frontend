@@ -5,7 +5,11 @@ function Footer() {
     <footer>
       <div className='logo'></div>
       <div>Todos os direitos reservados 2022</div>
-      <div>3</div>
+      <div>
+        <a href='https://github.com/charleslana' target='_blank'>
+          <div className='icon-github'></div>
+        </a>
+      </div>
     </footer>
   );
 }
