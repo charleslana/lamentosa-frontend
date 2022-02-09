@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 function NavBarOff() {
   return (
     <nav>
-      <Link to='/'>Home</Link>
-      <Link to='/error'>NotFound</Link>
+      <Link to='/'>Início</Link>
+      <Link to='/login'>Entrar</Link>
     </nav>
   );
 }
