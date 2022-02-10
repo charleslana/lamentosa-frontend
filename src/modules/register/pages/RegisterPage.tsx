@@ -1,7 +1,12 @@
+import createUserService from '../services/CreateUserService';
 import Footer from '../../../shared/components/Footer';
 import Header from '../../../shared/components/Header';
+import ICreateUser from '../interfaces/ICreateUser';
+import loaderService from '../../../shared/services/LoaderService';
+import modalService from '../../../shared/services/ModalService';
 import NavBarOff from '../../../shared/components/NavBarOff';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
   const [email, setEmail] = useState('');
@@ -10,10 +15,40 @@ function RegisterPage() {
   const [name, setName] = useState('');
   const [gender, setGender] = useState('');
   const [breed, setBreed] = useState('');
+  const { showLoading, hideLoading } = loaderService();
+  const { showModal } = modalService();
+  const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    alert(email);
+    if (password !== confirmPassword) {
+      showModal('A senhas digitadas não coincidem');
+      return;
+    }
+    requestCreateUser({
+      email: email,
+      password: password,
+      name: name,
+      gender: gender,
+      breed: breed,
+    });
+  };
+
+  const requestCreateUser = async (crateUser: ICreateUser) => {
+    showLoading();
+    await createUserService(crateUser)
+      .then(response => {
+        showModal(response.message as string);
+        navigate('/login');
+      })
+      .catch(error => {
+        if (error.validation) {
+          showModal(error.validation.body.message);
+          return;
+        }
+        showModal(error.message);
+      })
+      .finally(() => hideLoading());
   };
 
   return (

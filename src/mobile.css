@@ -2,4 +2,7 @@
   main {
     padding: 2rem;
   }
+  .modal {
+    width: 90%;
+  }
 }

@@ -1,5 +1,7 @@
 import HomePage from '../modules/home/pages/HomePage';
+import Loading from '../shared/components/Loading';
 import LoginPage from '../modules/login/pages/LoginPage';
+import Modal from '../shared/components/Modal';
 import NotFoundPage from '../shared/pages/NotFoundPage';
 import React from 'react';
 import RegisterPage from '../modules/register/pages/RegisterPage';
@@ -17,7 +19,9 @@ function index() {
         <Route path='/terms-of-service' element={<TermsOfService />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
+      <Modal />
       <ScrollToTop />
+      <Loading />
     </Router>
   );
 }

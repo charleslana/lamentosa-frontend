@@ -13,6 +13,9 @@ function Footer() {
         <a href='https://github.com/charleslana' target='_blank'>
           <div className='icon-github'></div>
         </a>
+        <a href='#' target='_blank'>
+          <div className='icon-discord'></div>
+        </a>
       </div>
     </footer>
   );
