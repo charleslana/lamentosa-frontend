@@ -1,7 +1,7 @@
 import Footer from '../../../shared/components/Footer';
 import Header from '../../../shared/components/Header';
 import ITopPlayersVampires from '../interfaces/ITopPlayersVampires';
-import NavBarOff from '../../../shared/components/NavBarOff';
+import NavBar from '../../../shared/components/NavBar';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -72,7 +72,7 @@ function HomePage() {
   return (
     <>
       <Header />
-      <NavBarOff />
+      <NavBar />
       <main>
         <h1 className='text-center'>Jogo de Vampiro</h1>
         <p>

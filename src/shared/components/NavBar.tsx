@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function NavBarOff() {
+function NavBar() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,4 +15,4 @@ function NavBarOff() {
   );
 }
 
-export default NavBarOff;
+export default NavBar;

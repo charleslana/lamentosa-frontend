@@ -1,10 +1,10 @@
-import NavBarOff from '../components/NavBarOff';
+import NavBar from '../components/NavBar';
 import React from 'react';
 
 function NotFoundPage() {
   return (
     <>
-      <NavBarOff />
+      <NavBar />
       <h1>NotFoundPage</h1>
     </>
   );

@@ -4,7 +4,7 @@ import Header from '../../../shared/components/Header';
 import ICreateUser from '../interfaces/ICreateUser';
 import loaderService from '../../../shared/services/LoaderService';
 import modalService from '../../../shared/services/ModalService';
-import NavBarOff from '../../../shared/components/NavBarOff';
+import NavBar from '../../../shared/components/NavBar';
 import React, { useState } from 'react';
 import routes from '../../../routes/routes';
 import { useNavigate } from 'react-router-dom';
@@ -55,7 +55,7 @@ function RegisterPage() {
   return (
     <>
       <Header />
-      <NavBarOff />
+      <NavBar />
       <main>
         <form onSubmit={handleSubmit}>
           <label>Email:</label>

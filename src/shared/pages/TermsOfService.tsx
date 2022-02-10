@@ -1,13 +1,13 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import NavBarOff from '../components/NavBarOff';
+import NavBar from '../components/NavBar';
 import React from 'react';
 
 function TermsOfService() {
   return (
     <>
       <Header />
-      <NavBarOff />
+      <NavBar />
       <main>
         <h1 className='text-center'>Regras e Termos de Serviços</h1>
         <h2>Regras</h2>
