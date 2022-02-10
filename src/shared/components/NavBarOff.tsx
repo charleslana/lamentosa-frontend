@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBarOff() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <nav>
       <Link to='/'>Início</Link>
       <Link to='/login'>Entrar</Link>
+      <Link to='/register'>Register</Link>
     </nav>
   );
 }

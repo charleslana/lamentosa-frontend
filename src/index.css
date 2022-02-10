@@ -64,6 +64,12 @@ button:focus-visible {
   outline: none;
 }
 
+button:disabled {
+  color: #6e6e6e;
+  background-color: #3c3c3c;
+  border: none;
+}
+
 input {
   background-color: #1e1f22;
   width: 100%;

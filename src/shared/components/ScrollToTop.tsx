@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-function ScrollButton() {
+function ScrollToTop() {
   const [visible, setVisible] = useState(false);
 
   const toggleVisible = () => {
@@ -11,13 +11,6 @@ function ScrollButton() {
       setVisible(false);
     }
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    return () => {
-      toggleVisible();
-    };
-  }, [setVisible]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -38,4 +31,4 @@ function ScrollButton() {
   );
 }
 
-export default ScrollButton;
+export default ScrollToTop;
