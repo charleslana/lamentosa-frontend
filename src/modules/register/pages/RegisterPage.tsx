@@ -66,7 +66,7 @@ function RegisterPage() {
           <br />
           <small>
             Ao criar meu personagem, afirmo que LI e CONCORDO com todos Termos
-            de Uso e Regras
+            de Serviço e Regras
           </small>
           <br />
           <button
