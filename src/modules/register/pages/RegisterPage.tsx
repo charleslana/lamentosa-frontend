@@ -6,6 +6,7 @@ import loaderService from '../../../shared/services/LoaderService';
 import modalService from '../../../shared/services/ModalService';
 import NavBarOff from '../../../shared/components/NavBarOff';
 import React, { useState } from 'react';
+import routes from '../../../routes/routes';
 import { useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
@@ -39,7 +40,7 @@ function RegisterPage() {
     await createUserService(crateUser)
       .then(response => {
         showModal(response.message as string);
-        navigate('/login');
+        navigate(routes.login);
       })
       .catch(error => {
         if (error.validation) {

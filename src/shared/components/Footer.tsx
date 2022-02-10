@@ -1,4 +1,5 @@
 import React from 'react';
+import routes from '../../routes/routes';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -6,8 +7,8 @@ function Footer() {
     <footer>
       <div className='logo'></div>
       <div>
-        Todos os direitos reservados 2022 |{' '}
-        <Link to='/terms-of-service'>Termos de Serviço e Regras</Link>
+        Todos os direitos reservados 2022 |&nbsp;
+        <Link to={routes.termsOfService}>Termos de Serviço e Regras</Link>
       </div>
       <div>
         <a href='https://github.com/charleslana' target='_blank'>

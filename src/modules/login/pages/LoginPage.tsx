@@ -6,6 +6,7 @@ import loaderService from '../../../shared/services/LoaderService';
 import modalService from '../../../shared/services/ModalService';
 import NavBarOff from '../../../shared/components/NavBarOff';
 import React, { useState } from 'react';
+import routes from '../../../routes/routes';
 import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
@@ -27,7 +28,7 @@ function LoginPage() {
     showLoading();
     await authenticateService(authenticate)
       .then(() => {
-        navigate('/status');
+        navigate(routes.status);
       })
       .catch(error => {
         if (error.validation) {
