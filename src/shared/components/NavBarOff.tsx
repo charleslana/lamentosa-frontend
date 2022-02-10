@@ -10,7 +10,7 @@ function NavBarOff() {
     <nav>
       <Link to='/'>Início</Link>
       <Link to='/login'>Entrar</Link>
-      <Link to='/register'>Register</Link>
+      <Link to='/register'>Cadastre-se</Link>
     </nav>
   );
 }
