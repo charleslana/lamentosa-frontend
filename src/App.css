@@ -453,3 +453,68 @@ footer div {
   right: 10px;
   bottom: 8px;
 }
+
+.menu {
+  border-top: 4px solid #4e5254;
+  padding-top: 0.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.dropdown-link {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 0 !important;
+  font-family: 'Cinzel';
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.arrow-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-right: 1.7rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #191a1d;
+  border: 1px solid #4a4a4a;
+  min-width: 160px;
+  box-shadow: 2px 2px 6px rgb(0 0 0 / 28%);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.85rem;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

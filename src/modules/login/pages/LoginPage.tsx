@@ -5,7 +5,7 @@ import IAuthenticate from '../interfaces/IAuthenticate';
 import loaderService from '../../../shared/services/LoaderService';
 import modalService from '../../../shared/services/ModalService';
 import NavBar from '../../../shared/components/NavBar';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import routes from '../../../routes/routes';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,6 +16,10 @@ function LoginPage() {
   const { showModal } = modalService();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    removeToken();
+  }, []);
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     requestAuthenticate({
@@ -24,10 +28,18 @@ function LoginPage() {
     });
   };
 
+  const removeToken = () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      localStorage.removeItem('token');
+    }
+  };
+
   const requestAuthenticate = async (authenticate: IAuthenticate) => {
     showLoading();
     await authenticateService(authenticate)
-      .then(() => {
+      .then(response => {
+        localStorage.setItem('token', response.data?.token as string);
         navigate(routes.status);
       })
       .catch(error => {

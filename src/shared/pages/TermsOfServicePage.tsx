@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import NavBar from '../components/NavBar';
 import React from 'react';
 
-function TermsOfService() {
+function TermsOfServicePage() {
   return (
     <>
       <Header />
@@ -30,4 +30,4 @@ function TermsOfService() {
   );
 }
 
-export default TermsOfService;
+export default TermsOfServicePage;

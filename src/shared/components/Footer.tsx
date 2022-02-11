@@ -8,7 +8,9 @@ function Footer() {
       <div className='logo'></div>
       <div>
         Todos os direitos reservados 2022 |&nbsp;
-        <Link to={routes.termsOfService}>Termos de Serviço e Regras</Link>
+        <Link to={routes.termsOfService} target='_blank'>
+          Termos de Serviço e Regras
+        </Link>
       </div>
       <div>
         <a href='https://github.com/charleslana' target='_blank'>

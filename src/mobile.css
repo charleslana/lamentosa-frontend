@@ -2,7 +2,12 @@
   main {
     padding: 2rem;
   }
+
   .modal {
     width: 90%;
+  }
+
+  .menu {
+    padding: 2rem;
   }
 }
