@@ -186,11 +186,17 @@ function HomePage() {
               <div className={`frame-name name-color-${vampire.color}`}>
                 {vampire.name}
               </div>
-              <div
-                className='frame-bar-life'
-                style={{ width: validateBar(vampire.minLife, vampire.maxLife) }}
-              >
-                {vampire.minLife}/{vampire.maxLife}
+              <div className='frame-bar'>
+                <div
+                  className='frame-bar-life'
+                  style={{
+                    width: validateBar(vampire.minLife, vampire.maxLife),
+                  }}
+                >
+                  <span>
+                    {vampire.minLife}/{vampire.maxLife}
+                  </span>
+                </div>
               </div>
             </div>
           ))}

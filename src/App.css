@@ -308,6 +308,10 @@ nav a:hover {
   color: #a60f93 !important;
 }
 
+.frame-bar {
+  position: relative;
+}
+
 .frame-bar-life {
   width: 115px;
   height: 25px;
@@ -316,6 +320,15 @@ nav a:hover {
   margin-left: 17px;
   line-height: 2;
   text-align: center;
+}
+
+.frame-bar span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 1.8;
 }
 
 footer {
@@ -586,18 +599,24 @@ footer div {
   cursor: pointer;
 }
 
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .character {
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-top: 2rem;
 }
 
 .inventory {
   height: 500px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .inventory-slot {
@@ -643,8 +662,8 @@ footer div {
 
 .avatar {
   border-radius: 50%;
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: 280px;
   margin-top: 24px;
   margin-left: 10px;
   position: relative;
@@ -713,4 +732,115 @@ footer div {
 
 .empty-hand {
   background-image: url(images/layout/empty_hand.png);
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 286px;
+  font-size: 18px;
+}
+
+.wrapper {
+  margin: 0 6px;
+  padding: 6px 12px;
+  border-right: 1px solid #3f4044;
+  text-align: center;
+}
+
+.gold {
+  color: #e59e23;
+}
+
+.gold {
+  width: 20px;
+  height: 20px;
+  background-image: url(images/layout/icon_gold.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.power {
+  width: 30px;
+  height: 30px;
+  background-image: url(images/layout/icon_power.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.combat {
+  width: 30px;
+  height: 30px;
+  background-image: url(images/layout/icon_combat.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.grimoire {
+  width: 30px;
+  height: 30px;
+  background-image: url(images/layout/icon_grimoire.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.attributes {
+  margin-top: 2rem;
+  width: 286px;
+}
+
+.attributes h4 {
+  border: none;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+.bar {
+  background-color: #1d1e21;
+  border: 1px solid #242529;
+  border-radius: 4px;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.bar p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.progress {
+  height: 25px;
+  background-image: url(images/layout/blue_bar.png);
+  background-repeat: no-repeat;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.bar-blue {
+  background-image: url(images/layout/blue_bar.png);
+}
+
+.bar-red {
+  background-image: url(images/layout/red_bar.png);
+  background-position: center;
+}
+
+.bar-orange {
+  background-image: url(images/layout/orange_bar.png);
 }

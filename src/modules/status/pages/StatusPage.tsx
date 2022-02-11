@@ -78,34 +78,89 @@ function StatusPage() {
             Solteiro(a) <span className='icon-marry-search'></span>
           </span>
         </div>
-        <div className='character'>
-          <ul className='inventory'>
-            <li className='inventory-slot'>
-              <div className='item item-1'>
-                <p>1</p>
-              </div>
-            </li>
-            <li className='inventory-slot'></li>
-            <li className='inventory-slot'></li>
-            <li className='inventory-slot'></li>
-            <li className='inventory-slot'></li>
-            <li className='inventory-slot'></li>
-          </ul>
-          <div className='profile-bg'>
-            <div className='avatar avatar-vampire-male-1'></div>
-            <div className='breed-vampire'></div>
-            <div className='level'>1</div>
-            <div className='name name-color-0'>Charles</div>
-            <div className='position'>Assistente de Coveiro</div>
-            <div className='age'>26 anos | Masculino</div>
-          </div>
-          <div>
-            <ul>
-              <li className='inventory-slot empty-head'></li>
-              <li className='inventory-slot empty-neck'></li>
-              <li className='inventory-slot empty-torso'></li>
-              <li className='inventory-slot empty-hand'></li>
+        <div className='status'>
+          <div className='character'>
+            <ul className='inventory'>
+              <li className='inventory-slot'>
+                <div className='item item-1'>
+                  <p>1</p>
+                </div>
+              </li>
+              <li className='inventory-slot'></li>
+              <li className='inventory-slot'></li>
+              <li className='inventory-slot'></li>
+              <li className='inventory-slot'></li>
+              <li className='inventory-slot'></li>
             </ul>
+            <div className='d-block'>
+              <div className='profile-bg'>
+                <div className='avatar avatar-vampire-male-1'></div>
+                <div className='breed-vampire'></div>
+                <div className='level'>1</div>
+                <div className='name name-color-0'>Charles</div>
+                <div className='position'>Assistente de Coveiro</div>
+                <div className='age'>26 anos | Masculino</div>
+              </div>
+              <div className='info'>
+                <div className='wrapper'>
+                  <span className='gold'></span> 5000
+                </div>
+                <div className='wrapper'>
+                  <span className='power'></span> 10
+                </div>
+                <div className='wrapper'>
+                  <span className='combat'></span> 0
+                </div>
+                <div className='wrapper'>
+                  <span className='grimoire'></span> 0
+                </div>
+              </div>
+            </div>
+            <div>
+              <ul>
+                <li className='inventory-slot empty-head'></li>
+                <li className='inventory-slot empty-neck'></li>
+                <li className='inventory-slot empty-torso'></li>
+                <li className='inventory-slot empty-hand'></li>
+              </ul>
+            </div>
+          </div>
+          <div className='attributes'>
+            <h4>Experiência</h4>
+            <div className='bar'>
+              <div className='progress bar-blue' style={{ width: 286 }}></div>
+              <p>0 / 5</p>
+            </div>
+            <h4>Vida</h4>
+            <div className='bar'>
+              <div className='progress bar-red' style={{ width: 286 }}></div>
+              <p>100 / 100</p>
+            </div>
+            <h4>Força</h4>
+            <div className='bar'>
+              <div className='progress bar-orange' style={{ width: 150 }}></div>
+              <p>5</p>
+            </div>
+            <h4>Defesa</h4>
+            <div className='bar'>
+              <div className='progress bar-orange' style={{ width: 150 }}></div>
+              <p>5</p>
+            </div>
+            <h4>Agilidade</h4>
+            <div className='bar'>
+              <div className='progress bar-orange' style={{ width: 150 }}></div>
+              <p>5</p>
+            </div>
+            <h4>Inteligência</h4>
+            <div className='bar'>
+              <div className='progress bar-orange' style={{ width: 150 }}></div>
+              <p>5</p>
+            </div>
+            <h4>Resistência</h4>
+            <div className='bar'>
+              <div className='progress bar-orange' style={{ width: 150 }}></div>
+              <p>5</p>
+            </div>
           </div>
         </div>
       </main>
