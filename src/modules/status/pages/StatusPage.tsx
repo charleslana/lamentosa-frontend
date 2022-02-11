@@ -1,17 +1,21 @@
+import CustomModal from '../../../shared/components/CustomModal';
 import Footer from '../../../shared/components/Footer';
 import Header from '../../../shared/components/Header';
 import loaderService from '../../../shared/services/LoaderService';
+import Marry from '../components/Marry';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
 import modalService from '../../../shared/services/ModalService';
 import React, { useEffect } from 'react';
 import routes from '../../../routes/routes';
 import userDetailsService from '../services/UserDetailsService';
 import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function StatusPage() {
   const { showLoading, hideLoading } = loaderService();
   const { showModal } = modalService();
   const navigate = useNavigate();
+  const [modalMarry, setModalMarry] = useState(false);
 
   useEffect(() => {
     //requestUserDetails();
@@ -28,6 +32,10 @@ function StatusPage() {
         showModal(error.message);
       })
       .finally(() => hideLoading());
+  };
+
+  const showMarry = () => {
+    setModalMarry(!modalMarry);
   };
 
   return (
@@ -61,13 +69,51 @@ function StatusPage() {
         </div>
         <h1 className='title text-center'>Estatísticas</h1>
         <p className='sub-title text-center'>Amaldiçoado Comum</p>
-        <span className='text-center uppercase'>
-          Transformou-se em vampiro em 25 de Dezembro de 2021 às 14:25
-        </span>
-        <span className='text-center'>
-          Solteiro(a) <span className='icon-marry-search'></span>
-        </span>
+        <div className='text-center'>
+          <span className='uppercase'>
+            Transformou-se em vampiro em 25 de Dezembro de 2021 às 14:25
+          </span>
+          <br />
+          <span className='cursor-pointer' onClick={showMarry}>
+            Solteiro(a) <span className='icon-marry-search'></span>
+          </span>
+        </div>
+        <div className='character'>
+          <ul className='inventory'>
+            <li className='inventory-slot'>
+              <div className='item item-1'>
+                <p>1</p>
+              </div>
+            </li>
+            <li className='inventory-slot'></li>
+            <li className='inventory-slot'></li>
+            <li className='inventory-slot'></li>
+            <li className='inventory-slot'></li>
+            <li className='inventory-slot'></li>
+          </ul>
+          <div className='profile-bg'>
+            <div className='avatar avatar-vampire-male-1'></div>
+            <div className='breed-vampire'></div>
+            <div className='level'>1</div>
+            <div className='name name-color-0'>Charles</div>
+            <div className='position'>Assistente de Coveiro</div>
+            <div className='age'>26 anos | Masculino</div>
+          </div>
+          <div>
+            <ul>
+              <li className='inventory-slot empty-head'></li>
+              <li className='inventory-slot empty-neck'></li>
+              <li className='inventory-slot empty-torso'></li>
+              <li className='inventory-slot empty-hand'></li>
+            </ul>
+          </div>
+        </div>
       </main>
+      {modalMarry ? (
+        <CustomModal children={<Marry />} showModal={showMarry} />
+      ) : (
+        ''
+      )}
       <Footer />
     </>
   );

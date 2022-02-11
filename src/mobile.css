@@ -9,5 +9,6 @@
 
   .menu {
     padding: 2rem;
+    position: inherit;
   }
 }

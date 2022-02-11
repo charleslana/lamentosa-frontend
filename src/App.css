@@ -296,12 +296,16 @@ nav a:hover {
   font-size: 13px;
 }
 
+.name-color-0 {
+  color: #9c5f23 !important;
+}
+
 .name-color-1 {
-  color: #2bd7d9;
+  color: #2bd7d9 !important;
 }
 
 .name-color-2 {
-  color: #a60f93;
+  color: #a60f93 !important;
 }
 
 .frame-bar-life {
@@ -454,11 +458,19 @@ footer div {
   bottom: 8px;
 }
 
+.custom-modal {
+  width: 70%;
+}
+
 .menu {
+  position: sticky;
+  top: 0;
   border-top: 4px solid #4e5254;
   padding-top: 0.5rem;
   padding-left: 5rem;
   padding-right: 5rem;
+  background-color: black;
+  z-index: 1;
 }
 
 .dropdown-link {
@@ -552,7 +564,6 @@ footer div {
 
 .content span {
   font-size: 12px;
-  display: block;
   line-height: 2;
 }
 
@@ -566,7 +577,140 @@ footer div {
   background-image: url(images/layout/search.png);
   background-repeat: no-repeat;
   background-size: contain;
-  display: inline-block;
+  display: inline-block !important;
   margin-left: 0.1rem;
   vertical-align: middle;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.character {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.inventory {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.inventory-slot {
+  background-image: url(images/layout/empty_slot.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10px 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.item {
+  background-image: url(images/items/1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.item-1 {
+  background-image: url(images/items/1.png);
+}
+
+.inventory-slot p {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  line-height: 1;
+  font-size: 11px;
+}
+
+.profile-bg {
+  background-image: url(images/layout/profile_bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  width: 286px;
+  height: 481px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 260px;
+  height: 260px;
+  margin-top: 24px;
+  margin-left: 10px;
+  position: relative;
+  z-index: -1;
+}
+
+.breed-vampire {
+  background-image: url(images/layout/vampire.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  width: 93px;
+  height: 103px;
+  top: 220px;
+  left: 40px;
+}
+
+.level {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 258px;
+  left: 180px;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Cinzel Decorative', sans-serif;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 24px;
+  font-family: 'Cinzel Decorative', sans-serif;
+  font-weight: 700;
+  color: #9c5f23;
+  margin-top: 40px;
+  margin-left: 31px;
+  width: 225px;
+}
+
+.position {
+  margin-top: 11px;
+  margin-left: 35px;
+  width: 225px;
+}
+
+.age {
+  margin-top: 11px;
+  margin-left: 35px;
+  width: 225px;
+}
+
+.empty-head {
+  background-image: url(images/layout/empty_head.png);
+}
+
+.empty-neck {
+  background-image: url(images/layout/empty_neck.png);
+}
+
+.empty-torso {
+  background-image: url(images/layout/empty_torso.png);
+}
+
+.empty-hand {
+  background-image: url(images/layout/empty_hand.png);
 }
