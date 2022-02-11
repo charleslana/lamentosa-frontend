@@ -468,7 +468,7 @@ footer div {
   border: none;
   cursor: pointer;
   margin: 0 !important;
-  font-family: 'Cinzel';
+  font-family: 'Cinzel', sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -517,4 +517,56 @@ footer div {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.content p {
+  line-height: 1.5;
+  color: white;
+}
+
+.alert {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 2px dashed #202020;
+  font-size: 0.85rem;
+}
+
+.alert a {
+  text-decoration: underline;
+}
+
+.title {
+  font-family: 'Cinzel Decorative', sans-serif;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.sub-title {
+  font-family: 'Cinzel Decorative', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.content span {
+  font-size: 12px;
+  display: block;
+  line-height: 2;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.icon-marry-search {
+  width: 12px;
+  height: 12px;
+  background-image: url(images/layout/search.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-left: 0.1rem;
+  vertical-align: middle;
 }
