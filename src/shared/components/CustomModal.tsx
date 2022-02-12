@@ -27,7 +27,9 @@ function CustomModal(props: IProps) {
   };
 
   return (
-    <div className={`modal-wrapper ${modal ? 'd-block' : 'd-none'}`}>
+    <div
+      className={`modal-wrapper z-index-1000 ${modal ? 'd-block' : 'd-none'}`}
+    >
       <div className='modal custom-modal'>
         <button className='close-modal' onClick={closeModal}>
           X

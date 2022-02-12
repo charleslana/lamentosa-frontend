@@ -7,6 +7,7 @@ import MenuDropdown from '../../../shared/components/MenuDropdown';
 import modalService from '../../../shared/services/ModalService';
 import React, { useEffect } from 'react';
 import routes from '../../../routes/routes';
+import Train from '../components/Train';
 import userDetailsService from '../services/UserDetailsService';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -16,6 +17,7 @@ function StatusPage() {
   const { showModal } = modalService();
   const navigate = useNavigate();
   const [modalMarry, setModalMarry] = useState(false);
+  const [modalTrain, setModalTrain] = useState(false);
 
   useEffect(() => {
     //requestUserDetails();
@@ -36,6 +38,10 @@ function StatusPage() {
 
   const showMarry = () => {
     setModalMarry(!modalMarry);
+  };
+
+  const showTrain = () => {
+    setModalTrain(!modalTrain);
   };
 
   return (
@@ -103,7 +109,8 @@ function StatusPage() {
               </div>
               <div className='info'>
                 <div className='wrapper'>
-                  <span className='gold'></span> 5000
+                  <span className='icon-gold'></span>{' '}
+                  <span className='gold'>5000</span>
                 </div>
                 <div className='wrapper'>
                   <span className='power'></span> 10
@@ -123,47 +130,72 @@ function StatusPage() {
               <li className='inventory-slot empty-hand'></li>
             </ul>
           </div>
-          <div className='attributes'>
-            <h4>Experiência</h4>
-            <div className='bar'>
-              <div className='progress bar-blue' style={{ width: 0 }}></div>
-              <p>0 / 5</p>
+          <div className='d-block'>
+            <div className='attributes'>
+              <h4>Experiência</h4>
+              <div className='bar'>
+                <div className='progress bar-blue' style={{ width: 0 }}></div>
+                <p>0 / 5</p>
+              </div>
+              <h4>Vida</h4>
+              <div className='bar'>
+                <div className='progress bar-red' style={{ width: 286 }}></div>
+                <p>100 / 100</p>
+              </div>
+              <h4>Força</h4>
+              <div className='bar'>
+                <div
+                  className='progress bar-orange'
+                  style={{ width: 150 }}
+                ></div>
+                <p>5</p>
+              </div>
+              <h4>Defesa</h4>
+              <div className='bar'>
+                <div
+                  className='progress bar-orange'
+                  style={{ width: 150 }}
+                ></div>
+                <p>5</p>
+              </div>
+              <h4>Agilidade</h4>
+              <div className='bar'>
+                <div
+                  className='progress bar-orange'
+                  style={{ width: 150 }}
+                ></div>
+                <p>5</p>
+              </div>
+              <h4>Inteligência</h4>
+              <div className='bar'>
+                <div
+                  className='progress bar-orange'
+                  style={{ width: 10 }}
+                ></div>
+                <p>5</p>
+              </div>
+              <h4>Resistência</h4>
+              <div className='bar'>
+                <div
+                  className='progress bar-orange'
+                  style={{ width: 10 }}
+                ></div>
+                <p>5</p>
+              </div>
             </div>
-            <h4>Vida</h4>
-            <div className='bar'>
-              <div className='progress bar-red' style={{ width: 286 }}></div>
-              <p>100 / 100</p>
-            </div>
-            <h4>Força</h4>
-            <div className='bar'>
-              <div className='progress bar-orange' style={{ width: 150 }}></div>
-              <p>5</p>
-            </div>
-            <h4>Defesa</h4>
-            <div className='bar'>
-              <div className='progress bar-orange' style={{ width: 150 }}></div>
-              <p>5</p>
-            </div>
-            <h4>Agilidade</h4>
-            <div className='bar'>
-              <div className='progress bar-orange' style={{ width: 150 }}></div>
-              <p>5</p>
-            </div>
-            <h4>Inteligência</h4>
-            <div className='bar'>
-              <div className='progress bar-orange' style={{ width: 10 }}></div>
-              <p>5</p>
-            </div>
-            <h4>Resistência</h4>
-            <div className='bar'>
-              <div className='progress bar-orange' style={{ width: 10 }}></div>
-              <p>5</p>
-            </div>
+            <h1 className='title train' onClick={showTrain}>
+              Treino
+            </h1>
           </div>
         </div>
       </main>
       {modalMarry ? (
         <CustomModal children={<Marry />} showModal={showMarry} />
+      ) : (
+        ''
+      )}
+      {modalTrain ? (
+        <CustomModal children={<Train />} showModal={showTrain} />
       ) : (
         ''
       )}
