@@ -1,6 +1,15 @@
 @media (max-width: 800px) {
+  header {
+    background-position: top;
+    height: 10rem;
+  }
+
   main {
     padding: 2rem;
+  }
+
+  .to-top {
+    right: 1rem;
   }
 
   .modal {
@@ -9,6 +18,39 @@
 
   .menu {
     padding: 2rem;
-    position: inherit;
+  }
+
+  .menu-dropdown {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: flex;
+  }
+
+  .character {
+    display: contents;
+  }
+
+  .inventory {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 124px;
+  }
+
+  .inventory-slot {
+    min-width: 100px;
+    height: 100px;
+    margin: 1rem;
+  }
+
+  .equipped-item {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 124px;
   }
 }

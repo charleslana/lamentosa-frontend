@@ -116,19 +116,17 @@ function StatusPage() {
                 </div>
               </div>
             </div>
-            <div>
-              <ul>
-                <li className='inventory-slot empty-head'></li>
-                <li className='inventory-slot empty-neck'></li>
-                <li className='inventory-slot empty-torso'></li>
-                <li className='inventory-slot empty-hand'></li>
-              </ul>
-            </div>
+            <ul className='equipped-item'>
+              <li className='inventory-slot empty-head'></li>
+              <li className='inventory-slot empty-neck'></li>
+              <li className='inventory-slot empty-torso'></li>
+              <li className='inventory-slot empty-hand'></li>
+            </ul>
           </div>
           <div className='attributes'>
             <h4>Experiência</h4>
             <div className='bar'>
-              <div className='progress bar-blue' style={{ width: 286 }}></div>
+              <div className='progress bar-blue' style={{ width: 0 }}></div>
               <p>0 / 5</p>
             </div>
             <h4>Vida</h4>
@@ -153,12 +151,12 @@ function StatusPage() {
             </div>
             <h4>Inteligência</h4>
             <div className='bar'>
-              <div className='progress bar-orange' style={{ width: 150 }}></div>
+              <div className='progress bar-orange' style={{ width: 10 }}></div>
               <p>5</p>
             </div>
             <h4>Resistência</h4>
             <div className='bar'>
-              <div className='progress bar-orange' style={{ width: 150 }}></div>
+              <div className='progress bar-orange' style={{ width: 10 }}></div>
               <p>5</p>
             </div>
           </div>

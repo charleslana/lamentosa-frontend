@@ -17,17 +17,17 @@ header {
 }
 
 nav {
-  position: fixed;
-  top: 0;
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: black;
 }
 
 nav a {
   padding: 2rem;
-  background-color: #1a1b1e;
   font-size: 0.8rem;
 }
 
@@ -400,7 +400,7 @@ footer div {
 }
 
 .d-block {
-  display: block;
+  display: block !important;
 }
 
 .loading-overlay {
@@ -542,6 +542,38 @@ footer div {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.menu-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.icon-mini-menu {
+  width: 24px;
+  height: 24px;
+  background-image: url(images/layout/mini_menu.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-battle {
+  width: 32px;
+  height: 32px;
+  background-image: url(images/layout/battle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-hunt {
+  width: 32px;
+  height: 32px;
+  background-image: url(images/layout/hunt.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .content p {
