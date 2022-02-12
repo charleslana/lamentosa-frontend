@@ -57,6 +57,7 @@ function LoginPage() {
       <Header />
       <NavBar />
       <main>
+        <h1 className='text-center'>Entrar</h1>
         <form onSubmit={handleSubmit}>
           <label>Email:</label>
           <div>

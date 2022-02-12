@@ -57,6 +57,7 @@ function RegisterPage() {
       <Header />
       <NavBar />
       <main>
+        <h1 className='text-center'>Registrar</h1>
         <form onSubmit={handleSubmit}>
           <label>Email:</label>
           <input

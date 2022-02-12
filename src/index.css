@@ -4,6 +4,8 @@
   border: 0;
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -73,7 +75,8 @@ button:disabled {
 }
 
 input,
-select {
+select,
+textarea {
   background-color: #1e1f22;
   width: 100%;
   border: 1px solid #353231;
@@ -111,4 +114,27 @@ tr:nth-child(even) {
 
 table button {
   margin: 0 !important;
+}
+
+hr {
+  border-bottom: 1px solid #3f4044;
+  line-height: 2.5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+small {
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem !important;
 }

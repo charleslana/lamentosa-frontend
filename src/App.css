@@ -19,6 +19,7 @@ header {
 nav {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   z-index: 1;
   position: sticky;
@@ -28,7 +29,7 @@ nav {
 
 nav a {
   padding: 2rem;
-  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 nav a:hover {
@@ -339,7 +340,6 @@ footer {
   width: 100%;
   height: 12rem;
   margin-top: 2rem !important;
-  font-size: 0.8rem;
 }
 
 footer .logo {
@@ -350,6 +350,11 @@ footer .logo {
 footer div {
   display: flex;
   margin: 1rem;
+  font-size: 0.8rem;
+}
+
+footer a {
+  font-size: 0.8rem;
 }
 
 .icon-github {
@@ -518,6 +523,7 @@ footer div {
 }
 
 .dropdown-content {
+  width: 100%;
   display: none;
   position: absolute;
   background: #191a1d;
@@ -548,7 +554,6 @@ footer div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 1rem;
   display: none;
 }
 
@@ -587,11 +592,15 @@ footer div {
   margin-bottom: 10px;
   text-align: center;
   border: 2px dashed #202020;
-  font-size: 0.85rem;
 }
 
 .alert a {
   text-decoration: underline;
+  font-size: 0.85rem;
+}
+
+.alert p {
+  font-size: 0.85rem;
 }
 
 .title {
@@ -665,19 +674,68 @@ footer div {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  width: 80px;
+  width: 100px;
   height: 80px;
   position: relative;
+  right: 10px;
 }
 
 .item-1 {
   background-image: url(images/items/1.png);
 }
 
+.item-2 {
+  background-image: url(images/items/2.png);
+}
+
+.item-3 {
+  background-image: url(images/items/3.png);
+}
+
+.item-4 {
+  background-image: url(images/items/4.png);
+}
+
+.item-5 {
+  background-image: url(images/items/5.png);
+}
+
+.item-6 {
+  background-image: url(images/items/6.png);
+}
+
+.item-1 {
+  background-image: url(images/items/1.png);
+}
+
+.item-7 {
+  background-image: url(images/items/7.png);
+}
+
+.item-8 {
+  background-image: url(images/items/8.png);
+}
+
+.item-9 {
+  background-image: url(images/items/9.png);
+}
+
+.item-10 {
+  background-image: url(images/items/10.png);
+}
+
+.item-11 {
+  background-image: url(images/items/11.png);
+}
+
+.item-12 {
+  background-image: url(images/items/12.png);
+}
+
 .inventory-slot p {
   position: absolute;
   top: 0;
-  left: 1px;
+  left: 13px;
   line-height: 1;
   font-size: 11px;
 }
@@ -894,4 +952,84 @@ footer div {
 
 .z-index-1000 {
   z-index: 1000;
+}
+
+.info-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.info-item h3,
+.info-item h5 {
+  font-weight: 400;
+  border: none;
+}
+
+.info-item-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip .tooltip-text {
+  background: #191a1d;
+  border: 1px solid #4a4a4a;
+  visibility: hidden;
+  min-width: 100%;
+  font-size: 12px;
+  box-shadow: 2px 2px 6px rgb(0 0 0 / 28%);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  margin-bottom: 5px;
+  transition: all 0.25s ease-out;
+  transform: translateY(0px);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  transform: translateY(-10px);
+  transition: all 0.25s ease-out;
+  opacity: 1;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.dynamic-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dynamic-table span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 60px;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.dynamic-table li {
+  width: 100px;
+  text-align: center;
 }

@@ -17,11 +17,13 @@
   }
 
   .menu {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .menu-dropdown {
     display: none;
+    overflow-y: auto;
+    margin-top: 1.5rem;
   }
 
   .menu-mobile {
