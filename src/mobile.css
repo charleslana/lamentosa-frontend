@@ -23,6 +23,21 @@
   .menu-dropdown {
     display: none;
     margin-top: 1.5rem;
+    overflow: auto;
+    overflow: auto;
+    height: 350px;
+  }
+
+  .dropdown {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .dropdown-content {
+    border: none;
+    background-color: black;
+    position: relative;
   }
 
   .menu-mobile {

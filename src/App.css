@@ -748,12 +748,16 @@ footer a {
   position: relative;
   width: 286px;
   height: 481px;
+  padding-top: 1px;
 }
 
 .avatar {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   border-radius: 50%;
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   margin-top: 24px;
   margin-left: 10px;
   position: relative;
