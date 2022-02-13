@@ -5,6 +5,7 @@ const routes = {
   termsOfService: '/terms-of-service',
   status: '/status',
   grimoire: '/grimoire',
+  sentinels: '/sentinels',
 };
 
 export default routes;

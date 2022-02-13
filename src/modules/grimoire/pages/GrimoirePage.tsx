@@ -215,7 +215,7 @@ function GrimoirePage() {
       <Header />
       <MenuDropdown />
       <main className='content'>
-        <h1 className='title text-center'>Grimório</h1>
+        <h1 className='title text-center text-bold'>Grimório</h1>
         <p className='text-center'>
           Ao chegar no nível 10 você deve escolher um Mestre, cada Mestre lhe
           ensinará Magias distintas que você poderá ver no Grimório.

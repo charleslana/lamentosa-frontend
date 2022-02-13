@@ -399,6 +399,7 @@ footer a {
   margin-bottom: 10px;
   text-align: center;
   border: 2px dashed #202020;
+  margin-top: 10px;
 }
 
 .alert a {
@@ -606,8 +607,8 @@ footer a {
 }
 
 .icon-gold {
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 16px;
   background-image: url(images/layout/icon_gold.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -716,6 +717,7 @@ footer a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 1rem;
 }
 
 .info-item h3,
@@ -826,4 +828,93 @@ footer a {
   background-position: center;
   width: 50px;
   height: 50px;
+}
+
+.mold {
+  background-image: url(images/layout/mold.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 178px;
+  height: 178px;
+  padding-top: 7px;
+  padding-left: 7px;
+}
+
+.sentinel-1 {
+  background-image: url(images/sentinels/kamena.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 163px;
+  height: 163px;
+  border-radius: 50%;
+}
+
+.sentinel-2 {
+  background-image: url(images/sentinels/zastita.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 163px;
+  height: 163px;
+  border-radius: 50%;
+}
+
+.sentinel-3 {
+  background-image: url(images/sentinels/tvrdica.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 163px;
+  height: 163px;
+  border-radius: 50%;
+}
+
+.sentinels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.sentinel-name {
+  margin-top: 2rem;
+  color: #9c5f23;
+  font-family: 'Cinzel Decorative', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.icon-crystal {
+  width: 21px;
+  height: 16px;
+  background-image: url(images/layout/icon_crystal.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.crystal {
+  color: #d43b1e !important;
+}
+
+.info-sentinel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.info-sentinel .img {
+  width: 80px;
+  height: 80px;
+  border-radius: 0;
+}
+
+.info-sentinel-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }

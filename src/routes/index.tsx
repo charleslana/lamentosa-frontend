@@ -8,6 +8,7 @@ import React from 'react';
 import RegisterPage from '../modules/register/pages/RegisterPage';
 import routes from './routes';
 import ScrollToTop from '../shared/components/ScrollToTop';
+import SentinelsPage from '../modules/sentinels/pages/SentinelsPage';
 import StatusPage from '../modules/status/pages/StatusPage';
 import TermsOfServicePage from '../shared/pages/TermsOfServicePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -22,6 +23,7 @@ function index() {
         <Route path={routes.termsOfService} element={<TermsOfServicePage />} />
         <Route path={routes.status} element={<StatusPage />} />
         <Route path={routes.grimoire} element={<GrimoirePage />} />
+        <Route path={routes.sentinels} element={<SentinelsPage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
       <Modal />

@@ -24,7 +24,7 @@ function StatusPage() {
   const [modalDescription, setModalDescription] = useState(false);
   const [modalInfoItem, setModalInfoItem] = useState(false);
   const [isEquip, setIsEquip] = useState(true);
-  const [name, setName] = useState('Lâmina Simples');
+  const [name, setName] = useState('Simple Blade');
   const [upgrade, setUpgrade] = useState(1);
   const [image, setImage] = useState(1);
   const [level, setLevel] = useState(1);
@@ -51,6 +51,22 @@ function StatusPage() {
         showModal(error.message);
       })
       .finally(() => hideLoading());
+  };
+
+  const setItem = () => {
+    setIsEquip(true);
+    setName('Simple Blade');
+    setUpgrade(1);
+    setImage(1);
+    setLevel(1);
+    setLife(0);
+    setForce(5);
+    setDefense(0);
+    setAgility(1);
+    setIntelligence(0);
+    setResistance(0);
+    setSlot(ItemSlotEnum.Hand);
+    showInfoItem();
   };
 
   const showDescription = () => {
@@ -113,10 +129,7 @@ function StatusPage() {
           <div className='character'>
             <ul className='inventory'>
               <li className='inventory-slot'>
-                <div
-                  className='item cursor-pointer item-1'
-                  onClick={showInfoItem}
-                >
+                <div className='item cursor-pointer item-1' onClick={setItem}>
                   <p>1</p>
                 </div>
               </li>
@@ -167,10 +180,7 @@ function StatusPage() {
             </div>
             <ul className='equipped-item'>
               <li className='inventory-slot empty-head'>
-                <div
-                  className='item cursor-pointer item-4'
-                  onClick={showInfoItem}
-                >
+                <div className='item cursor-pointer item-4' onClick={setItem}>
                   <p>1</p>
                 </div>
               </li>
