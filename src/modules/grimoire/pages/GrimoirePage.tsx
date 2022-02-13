@@ -63,9 +63,9 @@ function GrimoirePage() {
             <thead>
               <tr>
                 <th></th>
-                <th>Nome</th>
-                <th>Poder</th>
-                <th>Vitórias necessárias</th>
+                <th className='text-bold'>Nome</th>
+                <th className='text-bold'>Poder</th>
+                <th className='text-bold'>Vitórias necessárias</th>
               </tr>
             </thead>
             <tbody>
