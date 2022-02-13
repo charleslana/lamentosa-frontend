@@ -1,9 +1,215 @@
 import Footer from '../../../shared/components/Footer';
 import Header from '../../../shared/components/Header';
+import ISpell from '../interfaces/ISpell';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
 import React from 'react';
+import TypeMasterEnum from '../enum/TypeMasterEnum';
 
 function GrimoirePage() {
+  const spells: ISpell[] = [
+    {
+      name: 'Paralyze',
+      image: 1,
+      description: 'Paralisa o inimigo por algumas rodadas',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Vitalis,
+    },
+    {
+      name: 'Life Drain',
+      image: 2,
+      description: 'Drena parte da vida do inimigo na primeira rodada',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Vitalis,
+    },
+    {
+      name: 'Mercenary Rush',
+      image: 3,
+      description: 'Aumenta a quantidade de ouro roubado do inimigo',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Vitalis,
+    },
+    {
+      name: 'Db Protection',
+      image: 4,
+      description: 'Diminui o poder absoluto da magia DEFENSE BREAK',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Vitalis,
+    },
+    {
+      name: 'Master Possession',
+      image: 5,
+      description: 'Aumenta todos os atributos antes do combate',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Vitalis,
+    },
+    {
+      name: 'Auto Recovery',
+      image: 6,
+      description:
+        'Recupera parte da vida no final do combate desde que a vida esteja acima de 250 pontos',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Vitalis,
+    },
+    {
+      name: 'Human Sacrifice',
+      image: 7,
+      description: 'Diminui o custo da recuperação de vida no Templo',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Vitalis,
+    },
+    {
+      name: 'Defense Break',
+      image: 8,
+      description: 'Reduz parte da defesa do inimigo',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Aurum,
+    },
+    {
+      name: 'Vigilance',
+      image: 9,
+      description: 'Aumenta a quantidade de horas de imunidade',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Aurum,
+    },
+    {
+      name: 'Mirror Attack',
+      image: 10,
+      description: 'Copia parte da força do inimigo e acrescenta na sua força',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Aurum,
+    },
+    {
+      name: 'Dizziness Protection',
+      image: 11,
+      description: 'Diminui o poder absoluto da magia DIZZINESS',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Aurum,
+    },
+    {
+      name: 'Pb Protection	',
+      image: 12,
+      description:
+        'Diminui o poder absoluto da magia POISON BITE, no nível 5 POISON BITE é completamente anulado',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Aurum,
+    },
+    {
+      name: 'Mp Protection',
+      image: 13,
+      description: 'Diminui o poder absoluto da magia MASTER POSSESSION',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Aurum,
+    },
+    {
+      name: 'Curse Protection',
+      image: 14,
+      description: 'Diminui a quantidade de rodadas roubadas com a magia CURSE',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Aurum,
+    },
+    {
+      name: 'Rage',
+      image: 15,
+      description: 'Aumenta o dano em cada acerto',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Praegressus,
+    },
+    {
+      name: 'Insanity',
+      image: 16,
+      description: 'Reduz parte da inteligência do inimigo',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Praegressus,
+    },
+    {
+      name: 'Berserker Attack',
+      image: 17,
+      description:
+        'Causa um grande dano baseado no seu dano base na primeira rodada',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Praegressus,
+    },
+    {
+      name: 'Destruction',
+      image: 18,
+      description: 'Aumenta a força',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Praegressus,
+    },
+    {
+      name: 'Extreme Revenge',
+      image: 19,
+      description:
+        'Usa o dano do POISON BITE inimigo contra ele próprio em certas rodadas',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Praegressus,
+    },
+    {
+      name: 'Ld Protection',
+      image: 20,
+      description: 'Diminui o poder absoluto da magia LIFE DRAIN',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Praegressus,
+    },
+    {
+      name: 'Curse',
+      image: 21,
+      description: 'Diminui a quantidade de rodadas do inimigo',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Praegressus,
+    },
+    {
+      name: 'Poison Bite',
+      image: 22,
+      description: 'Envenena o inimigo por 5 rodadas, em cada uma ele perde',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Alacris,
+    },
+    {
+      name: 'Dizziness',
+      image: 23,
+      description: 'Reduz parte da força do inimigo',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Alacris,
+    },
+    {
+      name: 'Persistence',
+      image: 24,
+      description: 'Rodadas adicionais com 100% de acerto',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Alacris,
+    },
+    {
+      name: 'Ma Protection',
+      image: 25,
+      description: 'Diminui o poder absoluto da magia MIRROR ATTACK',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Alacris,
+    },
+    {
+      name: 'Paralyze Protection',
+      image: 26,
+      description: 'Diminui as rodadas da magia PARALYZE',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Alacris,
+    },
+    {
+      name: 'Inflict Wound',
+      image: 27,
+      description: 'Diminui a chance de bloqueio do inimigo',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Alacris,
+    },
+    {
+      name: 'Counter Attack',
+      image: 28,
+      description:
+        'Ataca o inimigo a cada ataque (normal) recebido, mas o dano do golpe é reduzido',
+      victories: [180, 360, 540, 720, 900],
+      typeMaster: TypeMasterEnum.Alacris,
+    },
+  ];
+
   return (
     <>
       <Header />
@@ -69,20 +275,131 @@ function GrimoirePage() {
               </tr>
             </thead>
             <tbody>
+              {spells.map(spell => {
+                if (spell.typeMaster === TypeMasterEnum.Vitalis) {
+                  return (
+                    <tr key={spell.name}>
+                      <td>
+                        <div className={`spell spell-${spell.image}`}></div>
+                      </td>
+                      <td>{spell.name}</td>
+                      <td>{spell.description}</td>
+                      <td>
+                        {spell.victories.map((victory, index) => (
+                          <small key={index} className='d-block'>
+                            {victory} - lvl {index + 1}
+                          </small>
+                        ))}
+                      </td>
+                    </tr>
+                  );
+                }
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className='uppercase color-aurum'>Mestre Aurum</p>
+        <div className='table-responsive'>
+          <table>
+            <thead>
               <tr>
-                <td>
-                  <div className='spell spell-1'></div>
-                </td>
-                <td>Paralyze</td>
-                <td>Paralisa o inimigo por algumas rodadas</td>
-                <td>
-                  <small className='d-block'>180 - lvl 1</small>
-                  <small className='d-block'>360 - lvl 2</small>
-                  <small className='d-block'>540 - lvl 3</small>
-                  <small className='d-block'>720 - lvl 4</small>
-                  <small className='d-block'>900 - lvl 5</small>
-                </td>
+                <th></th>
+                <th className='text-bold'>Nome</th>
+                <th className='text-bold'>Poder</th>
+                <th className='text-bold'>Vitórias necessárias</th>
               </tr>
+            </thead>
+            <tbody>
+              {spells.map(spell => {
+                if (spell.typeMaster === TypeMasterEnum.Aurum) {
+                  return (
+                    <tr key={spell.name}>
+                      <td>
+                        <div className={`spell spell-${spell.image}`}></div>
+                      </td>
+                      <td>{spell.name}</td>
+                      <td>{spell.description}</td>
+                      <td>
+                        {spell.victories.map((victory, index) => (
+                          <small key={index} className='d-block'>
+                            {victory} - lvl {index + 1}
+                          </small>
+                        ))}
+                      </td>
+                    </tr>
+                  );
+                }
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className='uppercase color-praegressus'>Mestre Praegressus</p>
+        <div className='table-responsive'>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th className='text-bold'>Nome</th>
+                <th className='text-bold'>Poder</th>
+                <th className='text-bold'>Vitórias necessárias</th>
+              </tr>
+            </thead>
+            <tbody>
+              {spells.map(spell => {
+                if (spell.typeMaster === TypeMasterEnum.Praegressus) {
+                  return (
+                    <tr key={spell.name}>
+                      <td>
+                        <div className={`spell spell-${spell.image}`}></div>
+                      </td>
+                      <td>{spell.name}</td>
+                      <td>{spell.description}</td>
+                      <td>
+                        {spell.victories.map((victory, index) => (
+                          <small key={index} className='d-block'>
+                            {victory} - lvl {index + 1}
+                          </small>
+                        ))}
+                      </td>
+                    </tr>
+                  );
+                }
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className='uppercase color-alacris'>Mestre Alacris</p>
+        <div className='table-responsive'>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th className='text-bold'>Nome</th>
+                <th className='text-bold'>Poder</th>
+                <th className='text-bold'>Vitórias necessárias</th>
+              </tr>
+            </thead>
+            <tbody>
+              {spells.map(spell => {
+                if (spell.typeMaster === TypeMasterEnum.Alacris) {
+                  return (
+                    <tr key={spell.name}>
+                      <td>
+                        <div className={`spell spell-${spell.image}`}></div>
+                      </td>
+                      <td>{spell.name}</td>
+                      <td>{spell.description}</td>
+                      <td>
+                        {spell.victories.map((victory, index) => (
+                          <small key={index} className='d-block'>
+                            {victory} - lvl {index + 1}
+                          </small>
+                        ))}
+                      </td>
+                    </tr>
+                  );
+                }
+              })}
             </tbody>
           </table>
         </div>
