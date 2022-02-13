@@ -168,7 +168,7 @@ function StatusPage() {
             <ul className='equipped-item'>
               <li className='inventory-slot empty-head'>
                 <div
-                  className='item cursor-pointer item-5'
+                  className='item cursor-pointer item-4'
                   onClick={showInfoItem}
                 >
                   <p>1</p>

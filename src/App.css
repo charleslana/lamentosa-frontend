@@ -77,203 +77,10 @@ nav a:hover {
 .frame-avatar {
   width: 148px;
   height: 148px;
-  background-image: url(images/avatar/vampire/male/1.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   border-radius: 50%;
-}
-
-.avatar-vampire-male-1 {
-  background-image: url(images/avatar/vampire/male/1.jpg);
-}
-
-.avatar-vampire-male-2 {
-  background-image: url(images/avatar/vampire/male/2.jpg);
-}
-
-.avatar-vampire-male-3 {
-  background-image: url(images/avatar/vampire/male/3.jpg);
-}
-
-.avatar-vampire-male-4 {
-  background-image: url(images/avatar/vampire/male/4.jpg);
-}
-
-.avatar-vampire-male-5 {
-  background-image: url(images/avatar/vampire/male/5.jpg);
-}
-
-.avatar-vampire-male-6 {
-  background-image: url(images/avatar/vampire/male/6.jpg);
-}
-
-.avatar-vampire-male-7 {
-  background-image: url(images/avatar/vampire/male/7.jpg);
-}
-
-.avatar-vampire-male-8 {
-  background-image: url(images/avatar/vampire/male/8.jpg);
-}
-
-.avatar-vampire-male-9 {
-  background-image: url(images/avatar/vampire/male/9.jpg);
-}
-
-.avatar-vampire-male-10 {
-  background-image: url(images/avatar/vampire/male/10.jpg);
-}
-
-.avatar-vampire-male-11 {
-  background-image: url(images/avatar/vampire/male/11.jpg);
-}
-
-.avatar-vampire-male-12 {
-  background-image: url(images/avatar/vampire/male/12.jpg);
-}
-
-.avatar-vampire-female-1 {
-  background-image: url(images/avatar/vampire/female/1.jpg);
-}
-
-.avatar-vampire-female-2 {
-  background-image: url(images/avatar/vampire/female/2.jpg);
-}
-
-.avatar-vampire-female-3 {
-  background-image: url(images/avatar/vampire/female/3.jpg);
-}
-
-.avatar-vampire-female-4 {
-  background-image: url(images/avatar/vampire/female/4.jpg);
-}
-
-.avatar-vampire-female-5 {
-  background-image: url(images/avatar/vampire/female/5.jpg);
-}
-
-.avatar-vampire-female-6 {
-  background-image: url(images/avatar/vampire/female/6.jpg);
-}
-
-.avatar-vampire-female-7 {
-  background-image: url(images/avatar/vampire/female/7.jpg);
-}
-
-.avatar-vampire-female-8 {
-  background-image: url(images/avatar/vampire/female/8.jpg);
-}
-
-.avatar-vampire-female-9 {
-  background-image: url(images/avatar/vampire/female/9.jpg);
-}
-
-.avatar-vampire-female-10 {
-  background-image: url(images/avatar/vampire/female/10.jpg);
-}
-
-.avatar-vampire-female-11 {
-  background-image: url(images/avatar/vampire/female/11.jpg);
-}
-
-.avatar-vampire-female-12 {
-  background-image: url(images/avatar/vampire/female/12.jpg);
-}
-
-.avatar-werewolf-male-1 {
-  background-image: url(images/avatar/werewolf/male/1.jpg);
-}
-
-.avatar-werewolf-male-2 {
-  background-image: url(images/avatar/werewolf/male/2.jpg);
-}
-
-.avatar-werewolf-male-3 {
-  background-image: url(images/avatar/werewolf/male/3.jpg);
-}
-
-.avatar-werewolf-male-4 {
-  background-image: url(images/avatar/werewolf/male/4.jpg);
-}
-
-.avatar-werewolf-male-5 {
-  background-image: url(images/avatar/werewolf/male/5.jpg);
-}
-
-.avatar-werewolf-male-6 {
-  background-image: url(images/avatar/werewolf/male/6.jpg);
-}
-
-.avatar-werewolf-male-7 {
-  background-image: url(images/avatar/werewolf/male/7.jpg);
-}
-
-.avatar-werewolf-male-8 {
-  background-image: url(images/avatar/werewolf/male/8.jpg);
-}
-
-.avatar-werewolf-male-9 {
-  background-image: url(images/avatar/werewolf/male/9.jpg);
-}
-
-.avatar-werewolf-male-10 {
-  background-image: url(images/avatar/werewolf/male/10.jpg);
-}
-
-.avatar-werewolf-male-11 {
-  background-image: url(images/avatar/werewolf/male/11.jpg);
-}
-
-.avatar-werewolf-male-12 {
-  background-image: url(images/avatar/werewolf/male/12.jpg);
-}
-
-.avatar-werewolf-female-1 {
-  background-image: url(images/avatar/werewolf/female/1.jpg);
-}
-
-.avatar-werewolf-female-2 {
-  background-image: url(images/avatar/werewolf/female/2.jpg);
-}
-
-.avatar-werewolf-female-3 {
-  background-image: url(images/avatar/werewolf/female/3.jpg);
-}
-
-.avatar-werewolf-female-4 {
-  background-image: url(images/avatar/werewolf/female/4.jpg);
-}
-
-.avatar-werewolf-female-5 {
-  background-image: url(images/avatar/werewolf/female/5.jpg);
-}
-
-.avatar-werewolf-female-6 {
-  background-image: url(images/avatar/werewolf/female/6.jpg);
-}
-
-.avatar-werewolf-female-7 {
-  background-image: url(images/avatar/werewolf/female/7.jpg);
-}
-
-.avatar-werewolf-female-8 {
-  background-image: url(images/avatar/werewolf/female/8.jpg);
-}
-
-.avatar-werewolf-female-9 {
-  background-image: url(images/avatar/werewolf/female/9.jpg);
-}
-
-.avatar-werewolf-female-10 {
-  background-image: url(images/avatar/werewolf/female/10.jpg);
-}
-
-.avatar-werewolf-female-11 {
-  background-image: url(images/avatar/werewolf/female/11.jpg);
-}
-
-.avatar-werewolf-female-12 {
-  background-image: url(images/avatar/werewolf/female/12.jpg);
 }
 
 .frame-level {
@@ -669,8 +476,15 @@ footer a {
   height: 100px;
 }
 
+.inventory-slot p {
+  position: absolute;
+  top: 0;
+  left: 13px;
+  line-height: 1;
+  font-size: 11px;
+}
+
 .item {
-  background-image: url(images/items/1.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -678,66 +492,6 @@ footer a {
   height: 80px;
   position: relative;
   right: 10px;
-}
-
-.item-1 {
-  background-image: url(images/items/1.png);
-}
-
-.item-2 {
-  background-image: url(images/items/2.png);
-}
-
-.item-3 {
-  background-image: url(images/items/3.png);
-}
-
-.item-4 {
-  background-image: url(images/items/4.png);
-}
-
-.item-5 {
-  background-image: url(images/items/5.png);
-}
-
-.item-6 {
-  background-image: url(images/items/6.png);
-}
-
-.item-1 {
-  background-image: url(images/items/1.png);
-}
-
-.item-7 {
-  background-image: url(images/items/7.png);
-}
-
-.item-8 {
-  background-image: url(images/items/8.png);
-}
-
-.item-9 {
-  background-image: url(images/items/9.png);
-}
-
-.item-10 {
-  background-image: url(images/items/10.png);
-}
-
-.item-11 {
-  background-image: url(images/items/11.png);
-}
-
-.item-12 {
-  background-image: url(images/items/12.png);
-}
-
-.inventory-slot p {
-  position: absolute;
-  top: 0;
-  left: 13px;
-  line-height: 1;
-  font-size: 11px;
 }
 
 .profile-bg {
@@ -1036,4 +790,40 @@ footer a {
 .dynamic-table li {
   width: 100px;
   text-align: center;
+}
+
+.grimoire-decks {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.font-decorative {
+  font-family: 'Cinzel Decorative', sans-serif;
+}
+
+.color-vitalis {
+  color: #d92b4c !important;
+}
+
+.color-aurum {
+  color: #eb8324 !important;
+}
+
+.color-praegressus {
+  color: #2bd7d9 !important;
+}
+
+.color-alacris {
+  color: #a60f93 !important;
+}
+
+.spell {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 50px;
+  height: 50px;
 }

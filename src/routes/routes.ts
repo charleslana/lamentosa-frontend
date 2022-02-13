@@ -4,6 +4,7 @@ const routes = {
   register: '/register',
   termsOfService: '/terms-of-service',
   status: '/status',
+  grimoire: '/grimoire',
 };
 
 export default routes;

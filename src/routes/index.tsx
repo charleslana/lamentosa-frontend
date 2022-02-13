@@ -1,3 +1,4 @@
+import GrimoirePage from '../modules/grimoire/pages/GrimoirePage';
 import HomePage from '../modules/home/pages/HomePage';
 import Loading from '../shared/components/Loading';
 import LoginPage from '../modules/login/pages/LoginPage';
@@ -20,6 +21,7 @@ function index() {
         <Route path={routes.register} element={<RegisterPage />} />
         <Route path={routes.termsOfService} element={<TermsOfServicePage />} />
         <Route path={routes.status} element={<StatusPage />} />
+        <Route path={routes.grimoire} element={<GrimoirePage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
       <Modal />

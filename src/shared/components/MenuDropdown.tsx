@@ -30,7 +30,7 @@ function MenuDropdown() {
           </button>
           <div className='dropdown-content'>
             <Link to={routes.status}>Meu Personagem</Link>
-            <Link to={routes.status}>Meu Grimório</Link>
+            <Link to={routes.grimoire}>Meu Grimório</Link>
             <Link to={routes.status}>Minhas Sentinelas</Link>
             <Link to={routes.status}>Tarefas Diárias</Link>
             <Link to={routes.status}>Conquistas</Link>
