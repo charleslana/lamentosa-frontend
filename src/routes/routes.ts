@@ -6,6 +6,7 @@ const routes = {
   status: '/status',
   grimoire: '/grimoire',
   sentinels: '/sentinels',
+  dailyTasks: '/daily-tasks',
 };
 
 export default routes;
