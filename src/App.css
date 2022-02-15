@@ -21,7 +21,6 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  z-index: 1;
   position: sticky;
   top: 0;
   background-color: black;
@@ -33,6 +32,18 @@ nav a {
 }
 
 nav a:hover {
+  border-top: 1px solid white;
+}
+
+nav button {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0;
+}
+
+nav button:hover {
   border-top: 1px solid white;
 }
 

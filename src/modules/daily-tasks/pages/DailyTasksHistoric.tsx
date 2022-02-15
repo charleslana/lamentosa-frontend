@@ -4,7 +4,7 @@ import MenuDropdown from '../../../shared/components/MenuDropdown';
 import React from 'react';
 import TabBarDailyTasks from '../components/TabBarDailyTasks';
 
-function DailyTasks() {
+function DailyTasksHistoric() {
   return (
     <>
       <Header />
@@ -12,10 +12,13 @@ function DailyTasks() {
       <main className='content'>
         <h2 className='title text-center text-bold'>Tarefas Diárias</h2>
         <TabBarDailyTasks />
+        <div className='alert'>
+          <p>Ainda não existe histórico.</p>
+        </div>
       </main>
       <Footer />
     </>
   );
 }
 
-export default DailyTasks;
+export default DailyTasksHistoric;
