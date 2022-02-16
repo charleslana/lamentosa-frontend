@@ -6,7 +6,7 @@ import TabBarDailyTasks from '../components/TabBarDailyTasks';
 
 interface IDailyTasks {
   day: number;
-  rewards?: {
+  rewards: {
     gold?: number;
     item?: string;
     grimoirePoints?: number;
