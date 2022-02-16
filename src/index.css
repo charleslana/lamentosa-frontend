@@ -112,7 +112,7 @@ td {
   padding: 16px;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) > td {
   background-color: #343434;
 }
 

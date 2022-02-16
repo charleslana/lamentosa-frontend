@@ -40,7 +40,7 @@ nav button {
   background-color: transparent;
   font-weight: 700;
   font-size: 16px;
-  margin: 0;
+  margin: 0 !important;
 }
 
 nav button:hover {
@@ -928,4 +928,29 @@ footer a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+}
+
+.daily-tasks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.icon-pvp-ranking {
+  background-image: url(images/layout/pvp_ranking.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+}
+
+.daily-tasks p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.items-center {
+  align-items: center;
 }
