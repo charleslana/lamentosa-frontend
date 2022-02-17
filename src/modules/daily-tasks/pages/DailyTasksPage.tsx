@@ -15,7 +15,7 @@ interface IDailyTasks {
   };
 }
 
-function DailyTasks() {
+function DailyTasksPage() {
   const rewards: IDailyTasks[] = [
     {
       day: 1,
@@ -287,4 +287,4 @@ function DailyTasks() {
   );
 }
 
-export default DailyTasks;
+export default DailyTasksPage;

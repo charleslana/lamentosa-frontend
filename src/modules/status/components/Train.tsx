@@ -27,7 +27,7 @@ function Train() {
           </thead>
           <tbody>
             <tr>
-              <td>Força</td>
+              <td className='text-bold'>Força</td>
               <td>6</td>
               <td>
                 1 <span className='icon-gold'></span>
@@ -37,7 +37,7 @@ function Train() {
               </td>
             </tr>
             <tr>
-              <td>Defesa</td>
+              <td className='text-bold'>Defesa</td>
               <td>6</td>
               <td>
                 1 <span className='icon-gold'></span>
@@ -47,7 +47,7 @@ function Train() {
               </td>
             </tr>
             <tr>
-              <td>Agilidade</td>
+              <td className='text-bold'>Agilidade</td>
               <td>6</td>
               <td>
                 1 <span className='icon-gold'></span>
@@ -57,7 +57,7 @@ function Train() {
               </td>
             </tr>
             <tr>
-              <td>Inteligência</td>
+              <td className='text-bold'>Inteligência</td>
               <td>6</td>
               <td>
                 1 <span className='icon-gold'></span>
@@ -67,7 +67,7 @@ function Train() {
               </td>
             </tr>
             <tr>
-              <td>Resistência</td>
+              <td className='text-bold'>Resistência</td>
               <td>6</td>
               <td>
                 1 <span className='icon-gold'></span>

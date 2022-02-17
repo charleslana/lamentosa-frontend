@@ -106,6 +106,10 @@ table {
   margin-bottom: 2rem;
 }
 
+th {
+  font-weight: 700;
+}
+
 th,
 td {
   text-align: center;

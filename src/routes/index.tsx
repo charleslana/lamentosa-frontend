@@ -1,5 +1,5 @@
-import DailyTasks from '../modules/daily-tasks/pages/DailyTasks';
-import DailyTasksHistoric from '../modules/daily-tasks/pages/DailyTasksHistoric';
+import DailyTasksHistoricPage from '../modules/daily-tasks/pages/DailyTasksHistoricPage';
+import DailyTasksPage from '../modules/daily-tasks/pages/DailyTasksPage';
 import GrimoirePage from '../modules/grimoire/pages/GrimoirePage';
 import HomePage from '../modules/home/pages/HomePage';
 import Loading from '../shared/components/Loading';
@@ -26,10 +26,10 @@ function index() {
         <Route path={routes.status} element={<StatusPage />} />
         <Route path={routes.grimoire} element={<GrimoirePage />} />
         <Route path={routes.sentinels} element={<SentinelsPage />} />
-        <Route path={routes.dailyTasks} element={<DailyTasks />} />
+        <Route path={routes.dailyTasks} element={<DailyTasksPage />} />
         <Route
           path={routes.dailyTasksHistoric}
-          element={<DailyTasksHistoric />}
+          element={<DailyTasksHistoricPage />}
         />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
