@@ -8,6 +8,7 @@ import './mobile.css';
 import './spells.css';
 import './items.css';
 import './avatar.css';
+import './achievements.css';
 
 ReactDOM.render(
   <React.StrictMode>

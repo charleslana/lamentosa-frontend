@@ -8,6 +8,7 @@ const routes = {
   sentinels: '/sentinels',
   dailyTasks: '/daily-tasks',
   dailyTasksHistoric: '/daily-tasks/historic',
+  achievements: '/achievements',
 };
 
 export default routes;

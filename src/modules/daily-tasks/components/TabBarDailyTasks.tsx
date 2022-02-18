@@ -5,10 +5,10 @@ import routes from '../../../routes/routes';
 import { Link } from 'react-router-dom';
 
 function TabBarDailyTasks() {
-  const [modalInstructions, setModalInstructions] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const showInstructions = () => {
-    setModalInstructions(!modalInstructions);
+    setModal(!modal);
   };
 
   return (
@@ -18,7 +18,7 @@ function TabBarDailyTasks() {
         <Link to={routes.dailyTasksHistoric}>Histórico</Link>
         <button onClick={showInstructions}>Instruções</button>
       </nav>
-      {modalInstructions ? (
+      {modal ? (
         <CustomModal children={<Instructions />} showModal={showInstructions} />
       ) : (
         ''

@@ -954,3 +954,48 @@ footer a {
 .items-center {
   align-items: center;
 }
+
+.achievements {
+  background-color: #262626;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 30px;
+  border-bottom: 1px solid black;
+}
+
+.achievements .divider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.achievements h3 {
+  margin-bottom: 0;
+}
+
+.achievements .bar {
+  width: 200px;
+  margin-bottom: 0;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.icon-achievements {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-info {
+  background-image: url(images/layout/info.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}

@@ -7,7 +7,7 @@ import MenuDropdown from '../../../shared/components/MenuDropdown';
 import React, { useState } from 'react';
 
 function SentinelsPage() {
-  const [modalSentinel, setModalSentinel] = useState(false);
+  const [modal, setModal] = useState(false);
   const [name, setName] = useState('');
   const [image, setImage] = useState(1);
   const [percentage, setPercentage] = useState(30);
@@ -48,7 +48,7 @@ function SentinelsPage() {
   };
 
   const showSentinel = () => {
-    setModalSentinel(!modalSentinel);
+    setModal(!modal);
   };
 
   return (
@@ -85,7 +85,7 @@ function SentinelsPage() {
           ))}
         </div>
       </main>
-      {modalSentinel ? (
+      {modal ? (
         <CustomModal
           children={
             <InfoSentinel

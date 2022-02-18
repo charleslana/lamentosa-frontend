@@ -1,3 +1,4 @@
+import AchievementsPage from '../modules/achievements/pages/AchievementsPage';
 import DailyTasksHistoricPage from '../modules/daily-tasks/pages/DailyTasksHistoricPage';
 import DailyTasksPage from '../modules/daily-tasks/pages/DailyTasksPage';
 import GrimoirePage from '../modules/grimoire/pages/GrimoirePage';
@@ -31,6 +32,7 @@ function index() {
           path={routes.dailyTasksHistoric}
           element={<DailyTasksHistoricPage />}
         />
+        <Route path={routes.achievements} element={<AchievementsPage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
       <Modal />
