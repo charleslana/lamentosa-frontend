@@ -21,8 +21,6 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  position: sticky;
-  top: 0;
   background-color: black;
 }
 
@@ -45,6 +43,12 @@ nav button {
 
 nav button:hover {
   border-top: 1px solid white;
+}
+
+.nav-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .text-center {
