@@ -1,7 +1,15 @@
+@import url(index.css);
+@import url(fonts.css);
+@import url(mobile.css);
+@import url(achievements.css);
+@import url(avatar.css);
+@import url(items.css);
+@import url(spells.css);
+
 header {
   width: 100%;
   height: 20rem;
-  background-image: url(images/layout/header_bg.jpg);
+  background-image: url(../images/layout/header_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -50px;
@@ -10,7 +18,7 @@ header {
 .logo {
   width: 100%;
   height: 100%;
-  background-image: url(images/layout/logo.png);
+  background-image: url(../images/layout/logo.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -73,7 +81,7 @@ nav button:hover {
 .frame-character {
   width: 148px;
   height: 246px;
-  background-image: url(images/layout/frame_character.png);
+  background-image: url(../images/layout/frame_character.png);
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0.3rem;
@@ -82,7 +90,7 @@ nav button:hover {
 .circle-vampire {
   width: 148px;
   height: 174px;
-  background-image: url(images/layout/circle_vampire.png);
+  background-image: url(../images/layout/circle_vampire.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -138,7 +146,7 @@ nav button:hover {
 .frame-bar-life {
   width: 115px;
   height: 25px;
-  background-image: url(images/layout/red_bar.png);
+  background-image: url(../images/layout/red_bar.png);
   background-repeat: no-repeat;
   margin-left: 17px;
   line-height: 2;
@@ -182,7 +190,7 @@ footer a {
 .icon-github {
   width: 50px;
   height: 50px;
-  background-image: url(images/layout/github.png);
+  background-image: url(../images/layout/github.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -190,7 +198,7 @@ footer a {
 .icon-discord {
   width: 50px;
   height: 50px;
-  background-image: url(images/layout/discord.png);
+  background-image: url(../images/layout/discord.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -213,7 +221,7 @@ footer a {
 .to-top i {
   width: 32px;
   height: 32px;
-  background-image: url(images/layout/to_top.png);
+  background-image: url(../images/layout/to_top.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -382,7 +390,7 @@ footer a {
 .icon-mini-menu {
   width: 24px;
   height: 24px;
-  background-image: url(images/layout/mini_menu.png);
+  background-image: url(../images/layout/mini_menu.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -390,7 +398,7 @@ footer a {
 .icon-battle {
   width: 32px;
   height: 32px;
-  background-image: url(images/layout/battle.png);
+  background-image: url(../images/layout/battle.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -398,7 +406,7 @@ footer a {
 .icon-hunt {
   width: 32px;
   height: 32px;
-  background-image: url(images/layout/hunt.png);
+  background-image: url(../images/layout/hunt.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -451,7 +459,7 @@ footer a {
 .icon-marry-search {
   width: 12px;
   height: 12px;
-  background-image: url(images/layout/search.png);
+  background-image: url(../images/layout/search.png);
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block !important;
@@ -484,7 +492,7 @@ footer a {
 }
 
 .inventory-slot {
-  background-image: url(images/layout/empty_slot.png);
+  background-image: url(../images/layout/empty_slot.png);
   background-repeat: no-repeat;
   background-size: contain;
   padding: 10px 10px;
@@ -511,7 +519,7 @@ footer a {
 }
 
 .profile-bg {
-  background-image: url(images/layout/profile_bg.png);
+  background-image: url(../images/layout/profile_bg.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -535,7 +543,7 @@ footer a {
 }
 
 .breed-vampire {
-  background-image: url(images/layout/vampire.png);
+  background-image: url(../images/layout/vampire.png);
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
@@ -583,19 +591,19 @@ footer a {
 }
 
 .empty-head {
-  background-image: url(images/layout/empty_head.png);
+  background-image: url(../images/layout/empty_head.png);
 }
 
 .empty-neck {
-  background-image: url(images/layout/empty_neck.png);
+  background-image: url(../images/layout/empty_neck.png);
 }
 
 .empty-torso {
-  background-image: url(images/layout/empty_torso.png);
+  background-image: url(../images/layout/empty_torso.png);
 }
 
 .empty-hand {
-  background-image: url(images/layout/empty_hand.png);
+  background-image: url(../images/layout/empty_hand.png);
 }
 
 .info {
@@ -624,7 +632,7 @@ footer a {
 .icon-gold {
   width: 21px;
   height: 16px;
-  background-image: url(images/layout/icon_gold.png);
+  background-image: url(../images/layout/icon_gold.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -635,7 +643,7 @@ footer a {
 .power {
   width: 30px;
   height: 30px;
-  background-image: url(images/layout/icon_power.png);
+  background-image: url(../images/layout/icon_power.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -646,7 +654,7 @@ footer a {
 .combat {
   width: 30px;
   height: 30px;
-  background-image: url(images/layout/icon_combat.png);
+  background-image: url(../images/layout/icon_combat.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -657,7 +665,7 @@ footer a {
 .grimoire {
   width: 30px;
   height: 30px;
-  background-image: url(images/layout/icon_grimoire.png);
+  background-image: url(../images/layout/icon_grimoire.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -695,23 +703,23 @@ footer a {
 
 .progress {
   height: 25px;
-  background-image: url(images/layout/blue_bar.png);
+  background-image: url(../images/layout/blue_bar.png);
   background-repeat: no-repeat;
   line-height: 1.4;
   text-align: center;
 }
 
 .bar-blue {
-  background-image: url(images/layout/blue_bar.png);
+  background-image: url(../images/layout/blue_bar.png);
 }
 
 .bar-red {
-  background-image: url(images/layout/red_bar.png);
+  background-image: url(../images/layout/red_bar.png);
   background-position: center;
 }
 
 .bar-orange {
-  background-image: url(images/layout/orange_bar.png);
+  background-image: url(../images/layout/orange_bar.png);
 }
 
 .train {
@@ -846,7 +854,7 @@ footer a {
 }
 
 .mold {
-  background-image: url(images/layout/mold.png);
+  background-image: url(../images/layout/mold.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 178px;
@@ -856,7 +864,7 @@ footer a {
 }
 
 .sentinel-1 {
-  background-image: url(images/sentinels/kamena.jpg);
+  background-image: url(../images/sentinels/kamena.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 163px;
@@ -865,7 +873,7 @@ footer a {
 }
 
 .sentinel-2 {
-  background-image: url(images/sentinels/zastita.jpg);
+  background-image: url(../images/sentinels/zastita.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 163px;
@@ -874,7 +882,7 @@ footer a {
 }
 
 .sentinel-3 {
-  background-image: url(images/sentinels/tvrdica.jpg);
+  background-image: url(../images/sentinels/tvrdica.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 163px;
@@ -901,7 +909,7 @@ footer a {
 .icon-crystal {
   width: 21px;
   height: 16px;
-  background-image: url(images/layout/icon_crystal.png);
+  background-image: url(../images/layout/icon_crystal.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -943,7 +951,7 @@ footer a {
 }
 
 .icon-pvp-ranking {
-  background-image: url(images/layout/pvp_ranking.png);
+  background-image: url(../images/layout/pvp_ranking.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 70px;
@@ -996,7 +1004,7 @@ footer a {
 }
 
 .icon-info {
-  background-image: url(images/layout/info.png);
+  background-image: url(../images/layout/info.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 24px;
