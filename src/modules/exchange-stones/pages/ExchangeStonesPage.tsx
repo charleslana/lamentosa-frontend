@@ -58,35 +58,35 @@ function ExchangeStonesPage() {
               </tr>
             </thead>
             <tbody>
-              <tr className='stone-green'>
+              <tr className='green'>
                 <td className='text-bold'>Green</td>
                 <td>{stoneGreen}</td>
                 <td className='gold'>
                   {goldStoneGreen} <span className='icon-gold'></span>
                 </td>
               </tr>
-              <tr className='stone-yellow'>
+              <tr className='yellow'>
                 <td className='text-bold'>Yellow</td>
                 <td>{stoneYellow}</td>
                 <td className='gold'>
                   {goldStoneYellow} <span className='icon-gold'></span>
                 </td>
               </tr>
-              <tr className='stone-orange'>
+              <tr className='orange'>
                 <td className='text-bold'>Orange</td>
                 <td>{stoneOrange}</td>
                 <td className='gold'>
                   {goldStoneOrange} <span className='icon-gold'></span>
                 </td>
               </tr>
-              <tr className='stone-blue'>
+              <tr className='blue'>
                 <td className='text-bold'>Blue</td>
                 <td>{stoneBlue}</td>
                 <td className='gold'>
                   {goldStoneBlue} <span className='icon-gold'></span>
                 </td>
               </tr>
-              <tr className='stone-red'>
+              <tr className='red'>
                 <td className='text-bold'>Red</td>
                 <td>{stoneRed}</td>
                 <td className='gold'>

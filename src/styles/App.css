@@ -1012,22 +1012,22 @@ footer a {
   cursor: pointer;
 }
 
-.stone-green {
+.green {
   color: green;
 }
 
-.stone-yellow {
+.yellow {
   color: #ff0;
 }
 
-.stone-orange {
+.orange {
   color: orange;
 }
 
-.stone-blue {
+.blue {
   color: #8b8bff;
 }
 
-.stone-red {
+.red {
   color: red;
 }

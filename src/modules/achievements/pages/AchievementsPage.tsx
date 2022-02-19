@@ -4,14 +4,15 @@ import Header from '../../../shared/components/Header';
 import IAchievement from '../interfaces/IAchievement';
 import InfoAchievement from '../components/InfoAchievement';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function AchievementsPage() {
   const [modal, setModal] = useState(false);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
+  const [achievements, setAchievements] = useState<IAchievement[]>();
 
-  const achievements: IAchievement[] = [
+  const dataAchievements: IAchievement[] = [
     {
       name: 'Soulmate',
       description:
@@ -77,6 +78,14 @@ function AchievementsPage() {
     },
   ];
 
+  useEffect(() => {
+    requestAchievements();
+  }, []);
+
+  const requestAchievements = async () => {
+    setAchievements(dataAchievements);
+  };
+
   const setAchievement = (achievement: IAchievement) => {
     setName(achievement.name);
     setDescription(achievement.description);
@@ -97,7 +106,7 @@ function AchievementsPage() {
           Conquistas podem desbloquear algumas funcionalidades e status, tente
           conseguir todas!
         </small>
-        {achievements.map(achievement => (
+        {achievements?.map(achievement => (
           <div key={achievement.name} className='achievements'>
             <div className='divider'>
               <div

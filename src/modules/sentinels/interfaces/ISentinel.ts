@@ -4,4 +4,5 @@ export default interface ISentinel {
   percentage: number;
   priceGrimoire: number;
   priceCrystal: number;
+  crystal?: number;
 }

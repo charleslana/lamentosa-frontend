@@ -2,11 +2,13 @@ import Footer from '../../../shared/components/Footer';
 import Header from '../../../shared/components/Header';
 import ISpell from '../interfaces/ISpell';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TypeMasterEnum from '../enum/TypeMasterEnum';
 
 function GrimoirePage() {
-  const spells: ISpell[] = [
+  const [spells, setSpells] = useState<ISpell[]>();
+
+  const dataSpells: ISpell[] = [
     {
       name: 'Paralyze',
       image: 1,
@@ -210,6 +212,14 @@ function GrimoirePage() {
     },
   ];
 
+  useEffect(() => {
+    requestGrimoire();
+  }, []);
+
+  const requestGrimoire = async () => {
+    setSpells(dataSpells);
+  };
+
   return (
     <>
       <Header />
@@ -275,7 +285,7 @@ function GrimoirePage() {
               </tr>
             </thead>
             <tbody>
-              {spells.map(spell => {
+              {spells?.map(spell => {
                 if (spell.typeMaster === TypeMasterEnum.Vitalis) {
                   return (
                     <tr key={spell.name}>
@@ -310,7 +320,7 @@ function GrimoirePage() {
               </tr>
             </thead>
             <tbody>
-              {spells.map(spell => {
+              {spells?.map(spell => {
                 if (spell.typeMaster === TypeMasterEnum.Aurum) {
                   return (
                     <tr key={spell.name}>
@@ -345,7 +355,7 @@ function GrimoirePage() {
               </tr>
             </thead>
             <tbody>
-              {spells.map(spell => {
+              {spells?.map(spell => {
                 if (spell.typeMaster === TypeMasterEnum.Praegressus) {
                   return (
                     <tr key={spell.name}>
@@ -380,7 +390,7 @@ function GrimoirePage() {
               </tr>
             </thead>
             <tbody>
-              {spells.map(spell => {
+              {spells?.map(spell => {
                 if (spell.typeMaster === TypeMasterEnum.Alacris) {
                   return (
                     <tr key={spell.name}>

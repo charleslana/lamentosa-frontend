@@ -4,7 +4,7 @@ import Header from '../../../shared/components/Header';
 import InfoSentinel from '../components/InfoSentinel';
 import ISentinel from '../interfaces/ISentinel';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function SentinelsPage() {
   const [modal, setModal] = useState(false);
@@ -13,8 +13,10 @@ function SentinelsPage() {
   const [percentage, setPercentage] = useState(30);
   const [priceGrimoire, setPriceGrimoire] = useState(6);
   const [priceCrystal, setPriceCrystal] = useState(13);
+  const [sentinels, setSentinels] = useState<ISentinel[]>();
+  const [crystals, setCrystals] = useState(0);
 
-  const sentinels: ISentinel[] = [
+  const dataSentinels: ISentinel[] = [
     {
       name: 'Kamena',
       image: 1,
@@ -37,6 +39,15 @@ function SentinelsPage() {
       priceCrystal: 39,
     },
   ];
+
+  useEffect(() => {
+    requestSentinels();
+  }, []);
+
+  const requestSentinels = async () => {
+    setSentinels(dataSentinels);
+    setCrystals(0);
+  };
 
   const setSentinel = (sentinel: ISentinel) => {
     setName(sentinel.name);
@@ -69,7 +80,7 @@ function SentinelsPage() {
           <p>Atualmente você não está com nenhum sentinela contratado.</p>
         </div>
         <div className='sentinels'>
-          {sentinels.map(sentinel => (
+          {sentinels?.map(sentinel => (
             <div
               key={sentinel.name}
               className='text-center cursor-pointer'
@@ -94,6 +105,7 @@ function SentinelsPage() {
               percentage={percentage}
               priceGrimoire={priceGrimoire}
               priceCrystal={priceCrystal}
+              crystal={crystals}
             />
           }
           showModal={showSentinel}

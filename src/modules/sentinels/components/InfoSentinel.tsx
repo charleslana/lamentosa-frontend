@@ -5,7 +5,7 @@ function InfoSentinel(props: ISentinel) {
   return (
     <>
       <p>
-        Você possui <span className='crystal'>0</span>{' '}
+        Você possui <span className='crystal'>{props.crystal}</span>{' '}
         <span className='icon-crystal'></span>
         <span className='normal'>cristais de sangue.</span>
       </p>
