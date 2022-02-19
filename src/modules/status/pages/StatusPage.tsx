@@ -65,38 +65,28 @@ function StatusPage() {
   const [resistance, setResistance] = useState(1);
   const [totalAttributes, setTotalAttributes] = useState(1);
   const [modalTrain, setModalTrain] = useState(false);
+  const [description, setDescription] = useState('');
   const [modalDescription, setModalDescription] = useState(false);
-
-  useEffect(() => {
-    requestUserDetails();
-  }, [formattedDate, totalAttributes]);
-
-  const formatData = () => {
-    const year = new Intl.DateTimeFormat('pt-BR', { year: 'numeric' }).format(
-      userDateCreate
-    );
-    const month = new Intl.DateTimeFormat('pt-BR', { month: 'long' }).format(
-      userDateCreate
-    );
-    const day = new Intl.DateTimeFormat('pt-BR', { day: '2-digit' }).format(
-      userDateCreate
-    );
-    const hour = new Intl.DateTimeFormat('pt-BR', { hour: '2-digit' }).format(
-      userDateCreate
-    );
-    const minute = new Intl.DateTimeFormat('pt-BR', {
-      minute: '2-digit',
-    }).format(userDateCreate);
-    setFormattedDate(`${day} de ${month} de ${year} às ${hour}:${minute}`);
-  };
-
-  const formatGender = () => {
-    if (gender.toLowerCase() === 'male') {
-      setFormattedGender('Masculino');
-      return;
-    }
-    setFormattedGender('Feminino');
-  };
+  const [honorVictories, setHonorVictories] = useState(0);
+  const [honorVictoriesRanking, setHonorVictoriesRanking] = useState(0);
+  const [totalBattles, setTotalBattles] = useState(0);
+  const [totalBattlesRanking, setTotalBattlesRanking] = useState(0);
+  const [battlesWon, setBattlesWon] = useState(0);
+  const [battlesWonRanking, setBattlesWonRanking] = useState(0);
+  const [lostBattles, setLostBattles] = useState(0);
+  const [lostBattlesRanking, setLostBattlesRanking] = useState(0);
+  const [draws, setDraws] = useState(0);
+  const [drawsRanking, setDrawsRanking] = useState(0);
+  const [damageCaused, setDamageCaused] = useState(0);
+  const [damageCausedRanking, setDamageCausedRanking] = useState(0);
+  const [damageSuffered, setDamageSuffered] = useState(0);
+  const [damageSufferedRanking, setDamageSufferedRanking] = useState(0);
+  const [goldEarned, setGoldEarned] = useState(0);
+  const [goldEarnedRanking, setGoldEarnedRanking] = useState(0);
+  const [lostGold, setLostGold] = useState(0);
+  const [lostGoldRanking, setLostGoldRanking] = useState(0);
+  const [tormentusPoints, setTormentusPoints] = useState(0);
+  const [tormentusPointsRanking, setTormentusPointsRanking] = useState(0);
 
   const dataItems: IItem[] = [
     {
@@ -135,6 +125,37 @@ function StatusPage() {
     },
   ];
 
+  useEffect(() => {
+    requestUserDetails();
+  }, [formattedDate, totalAttributes]);
+
+  const formatData = () => {
+    const year = new Intl.DateTimeFormat('pt-BR', { year: 'numeric' }).format(
+      userDateCreate
+    );
+    const month = new Intl.DateTimeFormat('pt-BR', { month: 'long' }).format(
+      userDateCreate
+    );
+    const day = new Intl.DateTimeFormat('pt-BR', { day: '2-digit' }).format(
+      userDateCreate
+    );
+    const hour = new Intl.DateTimeFormat('pt-BR', { hour: '2-digit' }).format(
+      userDateCreate
+    );
+    const minute = new Intl.DateTimeFormat('pt-BR', {
+      minute: '2-digit',
+    }).format(userDateCreate);
+    setFormattedDate(`${day} de ${month} de ${year} às ${hour}:${minute}`);
+  };
+
+  const formatGender = () => {
+    if (gender.toLowerCase() === 'male') {
+      setFormattedGender('Masculino');
+      return;
+    }
+    setFormattedGender('Feminino');
+  };
+
   const loadData = () => {
     setUserDateCreate(new Date('2022-02-18 10:00:00'));
     formatData();
@@ -162,6 +183,27 @@ function StatusPage() {
     setIntelligence(1);
     setResistance(1);
     setTotalAttributes(force + defense + agility + intelligence + resistance);
+    setDescription('');
+    setHonorVictories(0);
+    setHonorVictoriesRanking(0);
+    setTotalBattles(0);
+    setTotalBattlesRanking(0);
+    setBattlesWon(0);
+    setBattlesWonRanking(0);
+    setLostBattles(0);
+    setLostBattlesRanking(0);
+    setDraws(0);
+    setDrawsRanking(0);
+    setDamageCaused(0);
+    setDamageCausedRanking(0);
+    setDamageSuffered(0);
+    setDamageSufferedRanking(0);
+    setGoldEarned(0);
+    setGoldEarnedRanking(0);
+    setLostGold(0);
+    setLostGoldRanking(0);
+    setTormentusPoints(0);
+    setTormentusPointsRanking(0);
   };
 
   const requestUserDetails = async () => {
@@ -474,99 +516,101 @@ function StatusPage() {
         </div>
         <h1 className='title text-bold'>Descrição</h1>
         <p>
-          Esse personagem não possuí uma história. Escreva algo aqui, conte-nos
+          {description
+            ? description
+            : `Esse personagem não possuí uma história. Escreva algo aqui, conte-nos
           quem és, de onde veio, quais são seus objetivos... Ou talvez você
-          queira falar sobre seus medos *sic
+          queira falar sobre seus medos *sic`}
         </p>
         <button onClick={showDescription}>Editar</button>
         <h1 className='title text-bold'>Estatísticas</h1>
         <ul className='dynamic-table'>
           <li>
             <span>Vitórias de honra</span>
-            <span>0</span>
+            <span>{honorVictories}</span>
             <span>
-              10000º
+              {honorVictoriesRanking > 0 ? `${honorVictoriesRanking}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Total de Batalhas</span>
-            <span>0</span>
+            <span>{totalBattles}</span>
             <span>
-              10000º
+              {totalBattlesRanking > 0 ? `${totalBattlesRanking}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Batalhas Vencidas</span>
-            <span>0</span>
+            <span>{battlesWon}</span>
             <span>
-              10000º
+              {battlesWonRanking > 0 ? `${battlesWonRanking}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Batalhas Perdidas</span>
-            <span>0</span>
+            <span>{lostBattles}</span>
             <span>
-              10000º
+              {lostBattlesRanking > 0 ? `${lostBattlesRanking}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Empates</span>
-            <span>0</span>
+            <span>{draws}</span>
             <span>
-              10000º
+              {drawsRanking > 0 ? `${drawsRanking}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Danos Causados</span>
-            <span>0</span>
+            <span>{damageCaused}</span>
             <span>
-              10000º
+              {damageCausedRanking > 0 ? `${damageCausedRanking}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Danos Sofridos</span>
-            <span>0</span>
+            <span>{damageSuffered}</span>
             <span>
-              10000º
+              {damageSufferedRanking > 0 ? `${damageSufferedRanking}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Ouro Ganho</span>
-            <span>0</span>
+            <span>{goldEarned}</span>
             <span>
-              10000º
+              {goldEarnedRanking > 0 ? `${goldEarnedRanking}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Ouro Perdido</span>
-            <span>0</span>
+            <span>{lostGold}</span>
             <span>
-              10000º
+              {lostGoldRanking > 0 ? `${lostGoldRanking}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Pontos Tormentus</span>
-            <span>0</span>
+            <span>{tormentusPoints}</span>
             <span>
-              10000º
+              {tormentusPointsRanking > 0 ? `${tormentusPointsRanking}º` : '-'}
               <br />
               Ranking
             </span>
@@ -584,7 +628,10 @@ function StatusPage() {
         ''
       )}
       {modalDescription ? (
-        <CustomModal children={<Description />} showModal={showDescription} />
+        <CustomModal
+          children={<Description description={description} />}
+          showModal={showDescription}
+        />
       ) : (
         ''
       )}

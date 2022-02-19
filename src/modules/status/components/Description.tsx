@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 
-function Description() {
-  const [description, setDescription] = useState('');
+interface IProps {
+  description: string;
+}
+
+function Description(props: IProps) {
+  const [description, setDescription] = useState(props.description);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
