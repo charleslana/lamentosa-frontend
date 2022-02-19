@@ -1,24 +1,7 @@
-import ItemSlotEnum from '../../../shared/enum/ItemSlotEnum';
+import IItem from '../interfaces/IItem';
 import React from 'react';
 
-type IProps = {
-  isEquip: boolean;
-  name: string;
-  upgrade: number;
-  image: number;
-  level: number;
-  attributes: {
-    life: number;
-    force: number;
-    defense: number;
-    agility: number;
-    intelligence: number;
-    resistance: number;
-  };
-  slot: ItemSlotEnum;
-};
-
-function InfoItem(props: IProps) {
+function InfoItem(props: IItem) {
   return (
     <>
       <div className='info-item'>

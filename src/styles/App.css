@@ -1011,3 +1011,23 @@ footer a {
   height: 24px;
   cursor: pointer;
 }
+
+.stone-green {
+  color: green;
+}
+
+.stone-yellow {
+  color: #ff0;
+}
+
+.stone-orange {
+  color: orange;
+}
+
+.stone-blue {
+  color: #8b8bff;
+}
+
+.stone-red {
+  color: red;
+}

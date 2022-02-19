@@ -9,6 +9,7 @@ const routes = {
   dailyTasks: '/daily-tasks',
   dailyTasksHistoric: '/daily-tasks/historic',
   achievements: '/achievements',
+  exchangeStones: '/exchange-stones',
 };
 
 export default routes;

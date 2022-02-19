@@ -34,7 +34,7 @@ function MenuDropdown() {
             <Link to={routes.sentinels}>Minhas Sentinelas</Link>
             <Link to={routes.dailyTasks}>Tarefas Diárias</Link>
             <Link to={routes.achievements}>Conquistas</Link>
-            <Link to={routes.status}>Troca de Soul Stones</Link>
+            <Link to={routes.exchangeStones}>Troca de Soul Stones</Link>
             <Link to={routes.status}>Pontos de Honra</Link>
             <Link to={routes.status}>Transformados</Link>
           </div>
