@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { formatNumber } from '../../../shared/utils/Utils';
 
 function Train() {
   const [gold, setGold] = useState(0);
@@ -34,7 +35,7 @@ function Train() {
   return (
     <>
       <p className='uppercase'>
-        Você possui <span className='gold'>{gold}</span>{' '}
+        Você possui <span className='gold'>{formatNumber(gold)}</span>{' '}
         <span className='icon-gold'></span>
       </p>
       <small>
@@ -58,9 +59,9 @@ function Train() {
           <tbody>
             <tr>
               <td className='text-bold'>Força</td>
-              <td>{force}</td>
+              <td>{formatNumber(force)}</td>
               <td className='gold'>
-                {goldForce} <span className='icon-gold'></span>
+                {formatNumber(goldForce)} <span className='icon-gold'></span>
               </td>
               <td>
                 <button>Melhorar</button>
@@ -68,9 +69,9 @@ function Train() {
             </tr>
             <tr>
               <td className='text-bold'>Defesa</td>
-              <td>{defense}</td>
+              <td>{formatNumber(defense)}</td>
               <td className='gold'>
-                {goldDefense} <span className='icon-gold'></span>
+                {formatNumber(goldDefense)} <span className='icon-gold'></span>
               </td>
               <td>
                 <button>Melhorar</button>
@@ -78,9 +79,9 @@ function Train() {
             </tr>
             <tr>
               <td className='text-bold'>Agilidade</td>
-              <td>{agility}</td>
+              <td>{formatNumber(agility)}</td>
               <td className='gold'>
-                {goldAgility} <span className='icon-gold'></span>
+                {formatNumber(goldAgility)} <span className='icon-gold'></span>
               </td>
               <td>
                 <button>Melhorar</button>
@@ -88,9 +89,10 @@ function Train() {
             </tr>
             <tr>
               <td className='text-bold'>Inteligência</td>
-              <td>{intelligence}</td>
+              <td>{formatNumber(intelligence)}</td>
               <td className='gold'>
-                {goldIntelligence} <span className='icon-gold'></span>
+                {formatNumber(goldIntelligence)}{' '}
+                <span className='icon-gold'></span>
               </td>
               <td>
                 <button>Melhorar</button>
@@ -98,9 +100,10 @@ function Train() {
             </tr>
             <tr>
               <td className='text-bold'>Resistência</td>
-              <td>{resistance}</td>
+              <td>{formatNumber(resistance)}</td>
               <td className='gold'>
-                {goldResistance} <span className='icon-gold'></span>
+                {formatNumber(goldResistance)}{' '}
+                <span className='icon-gold'></span>
               </td>
               <td>
                 <button>Melhorar</button>
