@@ -14,10 +14,48 @@ function ExchangeStonesPage() {
   const [goldStoneOrange, setGoldStoneOrange] = useState(0);
   const [goldStoneBlue, setGoldStoneBlue] = useState(0);
   const [goldStoneRed, setGoldStoneRed] = useState(0);
+  const [stone, setStone] = useState('green');
+  const [quantity, setQuantity] = useState(0);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     requestExchangeStone();
   }, []);
+
+  const handleQuantity = (quantity: number, st = stone) => {
+    if (quantity > 200) {
+      setQuantity(200);
+      return;
+    }
+    setQuantity(quantity);
+    switch (st) {
+      case 'green':
+        setTotal(goldStoneGreen * quantity);
+        break;
+      case 'yellow':
+        setTotal(goldStoneYellow * quantity);
+        break;
+      case 'orange':
+        setTotal(goldStoneOrange * quantity);
+        break;
+      case 'blue':
+        setTotal(goldStoneBlue * quantity);
+        break;
+      default:
+        setTotal(goldStoneRed * quantity);
+        break;
+    }
+  };
+
+  const handleStone = (stone: string) => {
+    setStone(stone);
+    handleQuantity(quantity, stone);
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    alert(stone + '\n' + quantity);
+  };
 
   const requestExchangeStone = () => {
     setStoneGreen(0);
@@ -26,10 +64,10 @@ function ExchangeStonesPage() {
     setStoneBlue(0);
     setStoneRed(0);
     setGoldStoneGreen(254);
-    setGoldStoneYellow(254);
-    setGoldStoneOrange(254);
-    setGoldStoneBlue(254);
-    setGoldStoneRed(254);
+    setGoldStoneYellow(355);
+    setGoldStoneOrange(722);
+    setGoldStoneBlue(1064);
+    setGoldStoneRed(2439);
   };
 
   return (
@@ -96,6 +134,35 @@ function ExchangeStonesPage() {
             </tbody>
           </table>
         </div>
+        <form onSubmit={handleSubmit}>
+          <label>Cor da Stone:</label>
+          <select value={stone} onChange={e => handleStone(e.target.value)}>
+            <option value='green'>Green Souls</option>
+            <option value='yellow'>Yellow Souls</option>
+            <option value='orange'>Orange Souls</option>
+            <option value='blue'>Blue Souls</option>
+            <option value='red'>Red Souls</option>
+          </select>
+          <label>Quantidade:</label>
+          <input
+            type='number'
+            min='0'
+            value={quantity}
+            onChange={e => handleQuantity(+e.target.value)}
+          ></input>
+          <br />
+          <br />
+          <div className='text-center'>
+            Total: {total}&nbsp;<div className='icon-gold'></div>
+          </div>
+          <button
+            className='m-auto'
+            type='submit'
+            disabled={!stone || !quantity}
+          >
+            Trocar
+          </button>
+        </form>
       </main>
       <Footer />
     </>
