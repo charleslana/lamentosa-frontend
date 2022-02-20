@@ -4,6 +4,7 @@ import DailyTasksPage from '../modules/daily-tasks/pages/DailyTasksPage';
 import ExchangeStonesPage from '../modules/exchange-stones/pages/ExchangeStonesPage';
 import GrimoirePage from '../modules/grimoire/pages/GrimoirePage';
 import HomePage from '../modules/home/pages/HomePage';
+import HonorPointsPage from '../modules/honor-points/pages/HonorPointsPage';
 import Loading from '../shared/components/Loading';
 import LoginPage from '../modules/login/pages/LoginPage';
 import Modal from '../shared/components/Modal';
@@ -35,6 +36,7 @@ function index() {
         />
         <Route path={routes.achievements} element={<AchievementsPage />} />
         <Route path={routes.exchangeStones} element={<ExchangeStonesPage />} />
+        <Route path={routes.honorPoints} element={<HonorPointsPage />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
       <Modal />
