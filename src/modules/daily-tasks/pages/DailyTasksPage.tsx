@@ -3,6 +3,7 @@ import Header from '../../../shared/components/Header';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
 import React, { useEffect, useState } from 'react';
 import TabBarDailyTasks from '../components/TabBarDailyTasks';
+import { formatNumber } from '../../../shared/utils/Utils';
 
 interface IDailyTasks {
   day: number;
@@ -19,6 +20,8 @@ interface IDailyTasks {
 
 function DailyTasksPage() {
   const [tasks, setTasks] = useState<IDailyTasks[]>();
+  const [day, setDate] = useState(1);
+  const [winsToday, setWinsToday] = useState(0);
 
   const dataTasks: IDailyTasks[] = [
     {
@@ -286,6 +289,8 @@ function DailyTasksPage() {
 
   const requestDailyTasks = async () => {
     setTasks(dataTasks);
+    setDate(1);
+    setWinsToday(0);
   };
 
   return (
@@ -299,8 +304,10 @@ function DailyTasksPage() {
           <div className='icon-pvp-ranking'></div>
           <div className='d-flex items-center'>
             <div>
-              <p>Dia: 1</p>
-              <small className='text-bold'>Vitórias hoje: 0</small>
+              <p>Dia: {day}</p>
+              <small className='text-bold'>
+                Vitórias hoje: {formatNumber(winsToday)}
+              </small>
             </div>
           </div>
         </div>
@@ -319,7 +326,7 @@ function DailyTasksPage() {
                   <td className='text-bold'>{reward.day}</td>
                   <td>
                     {reward.rewards?.gold ? (
-                      <p>Ouro: {reward.rewards.gold}</p>
+                      <p>Ouro: {formatNumber(reward.rewards.gold)}</p>
                     ) : (
                       ''
                     )}
@@ -330,7 +337,8 @@ function DailyTasksPage() {
                     )}
                     {reward.rewards?.grimoirePoints ? (
                       <p>
-                        Pontos de grimório: {reward.rewards?.grimoirePoints}
+                        Pontos de grimório:{' '}
+                        {formatNumber(reward.rewards?.grimoirePoints)}
                       </p>
                     ) : (
                       ''
@@ -338,14 +346,15 @@ function DailyTasksPage() {
                     {reward.rewards?.enchantmentPoints ? (
                       <p>
                         Pontos de encantamento:{' '}
-                        {reward.rewards?.enchantmentPoints}
+                        {formatNumber(reward.rewards?.enchantmentPoints)}
                       </p>
                     ) : (
                       ''
                     )}
                     {reward.rewards?.grimoireBoost ? (
                       <p>
-                        Impulso de grimório: {reward.rewards?.grimoireBoost}
+                        Impulso de grimório:{' '}
+                        {formatNumber(reward.rewards?.grimoireBoost)}
                       </p>
                     ) : (
                       ''

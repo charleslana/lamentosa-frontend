@@ -1,11 +1,13 @@
 import ISentinel from '../interfaces/ISentinel';
 import React from 'react';
+import { formatNumber } from '../../../shared/utils/Utils';
 
 function InfoSentinel(props: ISentinel) {
   return (
     <>
       <p>
-        Você possui <span className='crystal'>{props.crystal}</span>{' '}
+        Você possui{' '}
+        <span className='crystal'>{formatNumber(Number(props.crystal))}</span>{' '}
         <span className='icon-crystal'></span>
         <span className='normal'>cristais de sangue.</span>
       </p>
@@ -26,9 +28,9 @@ function InfoSentinel(props: ISentinel) {
             final das 10 horas.
           </p>
           <br />
-          <p>Preço em Grimório: {props.priceGrimoire} vitórias</p>
+          <p>Preço em Grimório: {formatNumber(props.priceGrimoire)} vitórias</p>
           <p className='crystal'>
-            Preço em Cristais: {props.priceCrystal} cristais
+            Preço em Cristais: {formatNumber(props.priceCrystal)} cristais
           </p>
         </div>
       </div>

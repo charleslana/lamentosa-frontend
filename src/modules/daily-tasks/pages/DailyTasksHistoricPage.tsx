@@ -3,6 +3,7 @@ import Header from '../../../shared/components/Header';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
 import React from 'react';
 import TabBarDailyTasks from '../components/TabBarDailyTasks';
+import { formatDate } from '../../../shared/utils/Utils';
 
 function DailyTasksHistoricPage() {
   const hasTaskFinish = true;
@@ -30,7 +31,7 @@ function DailyTasksHistoricPage() {
               <tbody>
                 <tr>
                   <td className='text-bold'>1</td>
-                  <td>16 de Fevereiro de 2022 às 09:48</td>
+                  <td>{formatDate(new Date('2022-02-16 09:48'))}</td>
                 </tr>
               </tbody>
             </table>

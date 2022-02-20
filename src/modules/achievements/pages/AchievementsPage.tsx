@@ -5,6 +5,7 @@ import IAchievement from '../interfaces/IAchievement';
 import InfoAchievement from '../components/InfoAchievement';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
 import React, { useEffect, useState } from 'react';
+import { formatNumber } from '../../../shared/utils/Utils';
 
 function AchievementsPage() {
   const [modal, setModal] = useState(false);
@@ -51,21 +52,21 @@ function AchievementsPage() {
     {
       name: 'Slayer',
       description:
-        'Derrote 1000 inimigos da sua raça, se conseguir você receberá o título de SLAYER!',
+        'Derrote 1.000 inimigos da sua raça, se conseguir você receberá o título de SLAYER!',
       min: 7,
       max: 1000,
     },
     {
       name: 'Genocidal',
       description:
-        'Derrote 5000 inimigos da sua raça, se conseguir você receberá o título de GENOCIDAL!',
+        'Derrote 5.000 inimigos da sua raça, se conseguir você receberá o título de GENOCIDAL!',
       min: 0,
       max: 5000,
     },
     {
       name: 'Warlord',
       description:
-        'Derrote 15000 inimigos da sua raça, se conseguir você receberá o título de WARLORD!',
+        'Derrote 15.000 inimigos da sua raça, se conseguir você receberá o título de WARLORD!',
       min: 0,
       max: 15000,
     },
@@ -126,7 +127,8 @@ function AchievementsPage() {
                   }}
                 ></div>
                 <p>
-                  {achievement.min} / {achievement.max}
+                  {formatNumber(Number(achievement.min))} /{' '}
+                  {formatNumber(Number(achievement.max))}
                 </p>
               </div>
               <div

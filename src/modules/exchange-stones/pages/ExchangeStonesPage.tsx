@@ -2,6 +2,7 @@ import Footer from '../../../shared/components/Footer';
 import Header from '../../../shared/components/Header';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
 import React, { useEffect, useState } from 'react';
+import { formatNumber } from '../../../shared/utils/Utils';
 
 function ExchangeStonesPage() {
   const [stoneGreen, setStoneGreen] = useState(0);
@@ -22,13 +23,8 @@ function ExchangeStonesPage() {
     requestExchangeStone();
   }, []);
 
-  const handleQuantity = (quantity: number, st = stone) => {
-    if (quantity > 200) {
-      setQuantity(200);
-      return;
-    }
-    setQuantity(quantity);
-    switch (st) {
+  const calculateStone = (stone: string, quantity: number) => {
+    switch (stone) {
       case 'green':
         setTotal(goldStoneGreen * quantity);
         break;
@@ -45,6 +41,16 @@ function ExchangeStonesPage() {
         setTotal(goldStoneRed * quantity);
         break;
     }
+  };
+
+  const handleQuantity = (quantity: number, st = stone) => {
+    if (quantity > 200) {
+      setQuantity(200);
+      calculateStone(st, 200);
+      return;
+    }
+    setQuantity(quantity);
+    calculateStone(st, quantity);
   };
 
   const handleStone = (stone: string) => {
@@ -100,35 +106,40 @@ function ExchangeStonesPage() {
                 <td className='text-bold'>Green</td>
                 <td>{stoneGreen}</td>
                 <td className='gold'>
-                  {goldStoneGreen} <span className='icon-gold'></span>
+                  {formatNumber(goldStoneGreen)}{' '}
+                  <span className='icon-gold'></span>
                 </td>
               </tr>
               <tr className='yellow'>
                 <td className='text-bold'>Yellow</td>
                 <td>{stoneYellow}</td>
                 <td className='gold'>
-                  {goldStoneYellow} <span className='icon-gold'></span>
+                  {formatNumber(goldStoneYellow)}{' '}
+                  <span className='icon-gold'></span>
                 </td>
               </tr>
               <tr className='orange'>
                 <td className='text-bold'>Orange</td>
                 <td>{stoneOrange}</td>
                 <td className='gold'>
-                  {goldStoneOrange} <span className='icon-gold'></span>
+                  {formatNumber(goldStoneOrange)}{' '}
+                  <span className='icon-gold'></span>
                 </td>
               </tr>
               <tr className='blue'>
                 <td className='text-bold'>Blue</td>
                 <td>{stoneBlue}</td>
                 <td className='gold'>
-                  {goldStoneBlue} <span className='icon-gold'></span>
+                  {formatNumber(goldStoneBlue)}{' '}
+                  <span className='icon-gold'></span>
                 </td>
               </tr>
               <tr className='red'>
                 <td className='text-bold'>Red</td>
                 <td>{stoneRed}</td>
                 <td className='gold'>
-                  {goldStoneRed} <span className='icon-gold'></span>
+                  {formatNumber(goldStoneRed)}{' '}
+                  <span className='icon-gold'></span>
                 </td>
               </tr>
             </tbody>
@@ -153,7 +164,8 @@ function ExchangeStonesPage() {
           <br />
           <br />
           <div className='text-center'>
-            Total: {total}&nbsp;<div className='icon-gold'></div>
+            Total: {formatNumber(total)}&nbsp;
+            <div className='icon-gold'></div>
           </div>
           <button
             className='m-auto'

@@ -4,6 +4,7 @@ import ISpell from '../interfaces/ISpell';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
 import React, { useEffect, useState } from 'react';
 import TypeMasterEnum from '../enum/TypeMasterEnum';
+import { formatNumber } from '../../../shared/utils/Utils';
 
 function GrimoirePage() {
   const [spells, setSpells] = useState<ISpell[]>();
@@ -297,7 +298,7 @@ function GrimoirePage() {
                       <td>
                         {spell.victories.map((victory, index) => (
                           <small key={index} className='d-block'>
-                            {victory} - lvl {index + 1}
+                            {formatNumber(victory)} - lvl {index + 1}
                           </small>
                         ))}
                       </td>
@@ -332,7 +333,7 @@ function GrimoirePage() {
                       <td>
                         {spell.victories.map((victory, index) => (
                           <small key={index} className='d-block'>
-                            {victory} - lvl {index + 1}
+                            {formatNumber(victory)} - lvl {index + 1}
                           </small>
                         ))}
                       </td>
@@ -367,7 +368,7 @@ function GrimoirePage() {
                       <td>
                         {spell.victories.map((victory, index) => (
                           <small key={index} className='d-block'>
-                            {victory} - lvl {index + 1}
+                            {formatNumber(victory)} - lvl {index + 1}
                           </small>
                         ))}
                       </td>

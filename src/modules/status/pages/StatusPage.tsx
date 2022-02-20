@@ -13,6 +13,7 @@ import React, { useEffect } from 'react';
 import routes from '../../../routes/routes';
 import Train from '../components/Train';
 import userDetailsService from '../services/UserDetailsService';
+import { formatDate, formatNumber } from '../../../shared/utils/Utils';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -129,25 +130,6 @@ function StatusPage() {
     requestUserDetails();
   }, [formattedDate, totalAttributes]);
 
-  const formatData = () => {
-    const year = new Intl.DateTimeFormat('pt-BR', { year: 'numeric' }).format(
-      userDateCreate
-    );
-    const month = new Intl.DateTimeFormat('pt-BR', { month: 'long' }).format(
-      userDateCreate
-    );
-    const day = new Intl.DateTimeFormat('pt-BR', { day: '2-digit' }).format(
-      userDateCreate
-    );
-    const hour = new Intl.DateTimeFormat('pt-BR', { hour: '2-digit' }).format(
-      userDateCreate
-    );
-    const minute = new Intl.DateTimeFormat('pt-BR', {
-      minute: '2-digit',
-    }).format(userDateCreate);
-    setFormattedDate(`${day} de ${month} de ${year} às ${hour}:${minute}`);
-  };
-
   const formatGender = () => {
     if (gender.toLowerCase() === 'male') {
       setFormattedGender('Masculino');
@@ -158,7 +140,7 @@ function StatusPage() {
 
   const loadData = () => {
     setUserDateCreate(new Date('2022-02-18 10:00:00'));
-    formatData();
+    setFormattedDate(formatDate(userDateCreate));
     setAvatar(1);
     setBreed('Vampire');
     setLevel(1);
@@ -329,17 +311,17 @@ function StatusPage() {
                 <div className={`name name-color-${color}`}>{name}</div>
                 <div className='position'>{title}</div>
                 <div className='age'>
-                  {age} anos | {formattedGender}
+                  {formatNumber(age)} anos | {formattedGender}
                 </div>
               </div>
               <div className='info'>
                 <div className='wrapper tooltip'>
                   <span className='icon-gold'></span>{' '}
-                  <span className='gold'>{gold}</span>
+                  <span className='gold'>{formatNumber(gold)}</span>
                   <span className='tooltip-text'>Seu ouro</span>
                 </div>
                 <div className='wrapper tooltip'>
-                  <span className='power'></span> {power}
+                  <span className='power'></span> {formatNumber(power)}
                   <span className='tooltip-text'>
                     Poder de Luta: Baseado em suas habilidades desconsiderando
                     equipamentos.
@@ -354,7 +336,7 @@ function StatusPage() {
                   </span>
                 </div>
                 <div className='wrapper tooltip'>
-                  <span className='grimoire'></span> {grimoire}
+                  <span className='grimoire'></span> {formatNumber(grimoire)}
                   <span className='tooltip-text'>
                     Vitórias do Grimório: Usado para aprender magias após o
                     nível 10.
@@ -430,7 +412,7 @@ function StatusPage() {
                   style={{ width: (minExp * widthBar) / maxExp || 0 }}
                 ></div>
                 <p>
-                  {minExp} / {maxExp}
+                  {formatNumber(minExp)} / {formatNumber(maxExp)}
                 </p>
               </div>
               <h4>Vida</h4>
@@ -440,7 +422,7 @@ function StatusPage() {
                   style={{ width: (minLife * widthBar) / maxLife || 0 }}
                 ></div>
                 <p>
-                  {minLife} / {maxLife}
+                  {formatNumber(minLife)} / {formatNumber(maxLife)}
                 </p>
               </div>
               <h4 className='tooltip'>
@@ -454,7 +436,7 @@ function StatusPage() {
                   className='progress bar-orange'
                   style={{ width: (force * widthBar) / totalAttributes }}
                 ></div>
-                <p>{force}</p>
+                <p>{formatNumber(force)}</p>
               </div>
               <h4 className='tooltip'>
                 Defesa
@@ -467,7 +449,7 @@ function StatusPage() {
                   className='progress bar-orange'
                   style={{ width: (defense * widthBar) / totalAttributes }}
                 ></div>
-                <p>{defense}</p>
+                <p>{formatNumber(defense)}</p>
               </div>
               <h4 className='tooltip'>
                 Agilidade
@@ -480,7 +462,7 @@ function StatusPage() {
                   className='progress bar-orange'
                   style={{ width: (agility * widthBar) / totalAttributes }}
                 ></div>
-                <p>{agility}</p>
+                <p>{formatNumber(agility)}</p>
               </div>
               <h4 className='tooltip'>
                 Inteligência
@@ -493,7 +475,7 @@ function StatusPage() {
                   className='progress bar-orange'
                   style={{ width: (intelligence * widthBar) / totalAttributes }}
                 ></div>
-                <p>{intelligence}</p>
+                <p>{formatNumber(intelligence)}</p>
               </div>
               <h4 className='tooltip'>
                 Resistência
@@ -506,7 +488,7 @@ function StatusPage() {
                   className='progress bar-orange'
                   style={{ width: (resistance * widthBar) / totalAttributes }}
                 ></div>
-                <p>{resistance}</p>
+                <p>{formatNumber(resistance)}</p>
               </div>
             </div>
             <h1 className='title train text-bold' onClick={showTrain}>
@@ -527,90 +509,106 @@ function StatusPage() {
         <ul className='dynamic-table'>
           <li>
             <span>Vitórias de honra</span>
-            <span>{honorVictories}</span>
+            <span>{formatNumber(honorVictories)}</span>
             <span>
-              {honorVictoriesRanking > 0 ? `${honorVictoriesRanking}º` : '-'}
+              {honorVictoriesRanking > 0
+                ? `${formatNumber(honorVictoriesRanking)}º`
+                : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Total de Batalhas</span>
-            <span>{totalBattles}</span>
+            <span>{formatNumber(totalBattles)}</span>
             <span>
-              {totalBattlesRanking > 0 ? `${totalBattlesRanking}º` : '-'}
+              {totalBattlesRanking > 0
+                ? `${formatNumber(totalBattlesRanking)}º`
+                : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Batalhas Vencidas</span>
-            <span>{battlesWon}</span>
+            <span>{formatNumber(battlesWon)}</span>
             <span>
-              {battlesWonRanking > 0 ? `${battlesWonRanking}º` : '-'}
+              {battlesWonRanking > 0
+                ? `${formatNumber(battlesWonRanking)}º`
+                : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Batalhas Perdidas</span>
-            <span>{lostBattles}</span>
+            <span>{formatNumber(lostBattles)}</span>
             <span>
-              {lostBattlesRanking > 0 ? `${lostBattlesRanking}º` : '-'}
+              {lostBattlesRanking > 0
+                ? `${formatNumber(lostBattlesRanking)}º`
+                : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Empates</span>
-            <span>{draws}</span>
+            <span>{formatNumber(draws)}</span>
             <span>
-              {drawsRanking > 0 ? `${drawsRanking}º` : '-'}
+              {drawsRanking > 0 ? `${formatNumber(drawsRanking)}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Danos Causados</span>
-            <span>{damageCaused}</span>
+            <span>{formatNumber(damageCaused)}</span>
             <span>
-              {damageCausedRanking > 0 ? `${damageCausedRanking}º` : '-'}
+              {damageCausedRanking > 0
+                ? `${formatNumber(damageCausedRanking)}º`
+                : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Danos Sofridos</span>
-            <span>{damageSuffered}</span>
+            <span>{formatNumber(damageSuffered)}</span>
             <span>
-              {damageSufferedRanking > 0 ? `${damageSufferedRanking}º` : '-'}
+              {damageSufferedRanking > 0
+                ? `${formatNumber(damageSufferedRanking)}º`
+                : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Ouro Ganho</span>
-            <span>{goldEarned}</span>
+            <span>{formatNumber(goldEarned)}</span>
             <span>
-              {goldEarnedRanking > 0 ? `${goldEarnedRanking}º` : '-'}
+              {goldEarnedRanking > 0
+                ? `${formatNumber(goldEarnedRanking)}º`
+                : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Ouro Perdido</span>
-            <span>{lostGold}</span>
+            <span>{formatNumber(lostGold)}</span>
             <span>
-              {lostGoldRanking > 0 ? `${lostGoldRanking}º` : '-'}
+              {lostGoldRanking > 0 ? `${formatNumber(lostGoldRanking)}º` : '-'}
               <br />
               Ranking
             </span>
           </li>
           <li>
             <span>Pontos Tormentus</span>
-            <span>{tormentusPoints}</span>
+            <span>{formatNumber(tormentusPoints)}</span>
             <span>
-              {tormentusPointsRanking > 0 ? `${tormentusPointsRanking}º` : '-'}
+              {tormentusPointsRanking > 0
+                ? `${formatNumber(tormentusPointsRanking)}º`
+                : '-'}
               <br />
               Ranking
             </span>

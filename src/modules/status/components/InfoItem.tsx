@@ -1,5 +1,6 @@
 import IItem from '../interfaces/IItem';
 import React from 'react';
+import { formatNumber } from '../../../shared/utils/Utils';
 
 function InfoItem(props: IItem) {
   return (
@@ -14,32 +15,32 @@ function InfoItem(props: IItem) {
         </div>
         <div>
           {props.attributes.life > 0 ? (
-            <p>Vida: +{props.attributes.life}</p>
+            <p>Vida: +{formatNumber(props.attributes.life)}</p>
           ) : (
             ''
           )}
           {props.attributes.force > 0 ? (
-            <p>Força: +{props.attributes.force}</p>
+            <p>Força: +{formatNumber(props.attributes.force)}</p>
           ) : (
             ''
           )}
           {props.attributes.defense > 0 ? (
-            <p>Defesa: +{props.attributes.defense}</p>
+            <p>Defesa: +{formatNumber(props.attributes.defense)}</p>
           ) : (
             ''
           )}
           {props.attributes.agility > 0 ? (
-            <p>Agilidade: +{props.attributes.agility}</p>
+            <p>Agilidade: +{formatNumber(props.attributes.agility)}</p>
           ) : (
             ''
           )}
           {props.attributes.intelligence > 0 ? (
-            <p>Inteligência: +{props.attributes.intelligence}</p>
+            <p>Inteligência: +{formatNumber(props.attributes.intelligence)}</p>
           ) : (
             ''
           )}
           {props.attributes.resistance > 0 ? (
-            <p>Resistência: +{props.attributes.resistance}</p>
+            <p>Resistência: +{formatNumber(props.attributes.resistance)}</p>
           ) : (
             ''
           )}
