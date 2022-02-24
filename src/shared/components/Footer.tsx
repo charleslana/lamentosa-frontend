@@ -1,5 +1,6 @@
 import React from 'react';
 import routes from '../../routes/routes';
+import translate from '../../translate/translate';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -7,9 +8,12 @@ function Footer() {
     <footer>
       <div className='logo'></div>
       <div>
-        Todos os direitos reservados 2022 |&nbsp;
+        {translate.formatString(translate.footer.detail1, {
+          year: new Date().getFullYear(),
+        })}{' '}
+        |&nbsp;
         <Link to={routes.termsOfService} target='_blank'>
-          Termos de Serviço e Regras
+          {translate.footer.detail2}
         </Link>
       </div>
       <div>

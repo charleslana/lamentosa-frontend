@@ -31,6 +31,43 @@ const translate = new LocalizedStrings({
       detail13: 'So, shall we start playing Lamenta now?',
       subTitle4: 'Some Vampires that play mournful',
     },
+    navBar: {
+      home: 'Home',
+      login: 'Login',
+      register: 'Register',
+    },
+    footer: {
+      detail1: 'All rights reserved {year}',
+      detail2: 'Terms of Service and Rules',
+    },
+    login: {
+      title: 'Login',
+      inputEmail: 'Email:',
+      inputPassword: 'Password:',
+      button: 'Login',
+    },
+    register: {
+      title: 'Register',
+      inputEmail: 'Email:',
+      inputPassword: 'Password:',
+      inputConfirmPassword: 'Confirm the password:',
+      inputName: `Character's Name:`,
+      inputGender: 'Gender:',
+      inputGenderOption1: 'Select',
+      inputGenderOption2: 'Male',
+      inputGenderOption3: 'Female',
+      inputBreed: 'Breed:',
+      inputBreedOption1: 'Select',
+      inputBreedOption2: 'Vampire',
+      inputBreedOption3: 'Werewolf',
+      detail1:
+        'By creating my character, I affirm that I have read and AGREE to all Terms of Service and Rules',
+      button: 'Transform',
+      messageError1: 'The passwords entered do not match',
+    },
+    notFound: {
+      title: 'Page not found',
+    },
   },
   pt: {
     home: {
@@ -65,6 +102,43 @@ const translate = new LocalizedStrings({
         'Bom, em resumo é isso que você precisa saber agora, pois se fosse falar tudo o que se pode fazer aqui, todas as possibilidades estratégicas, builds, etc ficaria um texto enorme e muito chato. Outro ponto é que queremos que você se socialize com os outros jogadores vampiros para tirar suas dúvidas :)',
       detail13: 'E então, vamos começar a jogar Lamentosa agora?',
       subTitle4: 'Alguns Vampiros que jogam lamentosa',
+    },
+    navBar: {
+      home: 'Início',
+      login: 'Entrar',
+      register: 'Cadastre-se',
+    },
+    footer: {
+      detail1: 'Todos os direitos reservados {year}',
+      detail2: 'Termos de Serviço e Regras',
+    },
+    login: {
+      title: 'Entrar',
+      inputEmail: 'Email:',
+      inputPassword: 'Senha:',
+      button: 'Entrar',
+    },
+    register: {
+      title: 'Registrar',
+      inputEmail: 'Email:',
+      inputPassword: 'Senha:',
+      inputConfirmPassword: 'Confirme a senha:',
+      inputName: 'Nome do personagem:',
+      inputGender: 'Gênero:',
+      inputGenderOption1: 'Selecione',
+      inputGenderOption2: 'Masculino',
+      inputGenderOption3: 'Feminino',
+      inputBreed: 'Raça:',
+      inputBreedOption1: 'Selecione',
+      inputBreedOption2: 'Vampiro',
+      inputBreedOption3: 'Lobisomem',
+      detail1:
+        'Ao criar meu personagem, afirmo que LI e CONCORDO com todos Termos de Serviço e Regras',
+      button: 'Transformar',
+      messageError1: 'A senhas digitadas não coincidem',
+    },
+    notFound: {
+      title: 'Página não encontrada',
     },
   },
 });

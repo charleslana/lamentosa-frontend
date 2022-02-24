@@ -7,6 +7,7 @@ import modalService from '../../../shared/services/ModalService';
 import NavBar from '../../../shared/components/NavBar';
 import React, { useState } from 'react';
 import routes from '../../../routes/routes';
+import translate from '../../../translate/translate';
 import { useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
@@ -23,7 +24,7 @@ function RegisterPage() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (password !== confirmPassword) {
-      showModal('A senhas digitadas não coincidem');
+      showModal(translate.register.messageError1);
       return;
     }
     requestCreateUser({
@@ -57,54 +58,59 @@ function RegisterPage() {
       <Header />
       <NavBar />
       <main>
-        <h1 className='text-center'>Registrar</h1>
+        <h1 className='text-center'>{translate.register.title}</h1>
         <form onSubmit={handleSubmit}>
-          <label>Email:</label>
+          <label>{translate.register.inputEmail}</label>
           <input
             type='email'
             value={email}
             onChange={e => setEmail(e.target.value.trim())}
           ></input>
-          <label>Senha:</label>
+          <label>{translate.register.inputPassword}</label>
           <input
             type='password'
             value={password}
             onChange={e => setPassword(e.target.value)}
           ></input>
-          <label>Confirme a senha:</label>
+          <label>{translate.register.inputConfirmPassword}</label>
           <input
             type='password'
             value={confirmPassword}
             onChange={e => setConfirmPassword(e.target.value)}
           ></input>
-          <label>Nome do personagem:</label>
+          <label>{translate.register.inputName}</label>
           <input
             type='text'
             value={name}
             onChange={e => setName(e.target.value.trim())}
           ></input>
-          <label>Gênero:</label>
+          <label>{translate.register.inputGender}</label>
           <select value={gender} onChange={e => setGender(e.target.value)}>
             <option value='' disabled>
-              Selecione
+              {translate.register.inputGenderOption1}
             </option>
-            <option value='Male'>Masculino</option>
-            <option value='Female'>Feminino</option>
+            <option value='Male'>
+              {translate.register.inputGenderOption2}
+            </option>
+            <option value='Female'>
+              {translate.register.inputGenderOption3}
+            </option>
           </select>
-          <label>Raça:</label>
+          <label>{translate.register.inputBreed}</label>
           <select value={breed} onChange={e => setBreed(e.target.value)}>
             <option value='' disabled>
-              Selecione
+              {translate.register.inputBreedOption1}
             </option>
-            <option value='Vampire'>Vampiro</option>
-            <option value='Werewolf'>Lobisomem</option>
+            <option value='Vampire'>
+              {translate.register.inputBreedOption2}
+            </option>
+            <option value='Werewolf'>
+              {translate.register.inputBreedOption3}
+            </option>
           </select>
           <br />
           <br />
-          <small>
-            Ao criar meu personagem, afirmo que LI e CONCORDO com todos Termos
-            de Serviço e Regras
-          </small>
+          <small>{translate.register.detail1}</small>
           <br />
           <button
             type='submit'
@@ -117,7 +123,7 @@ function RegisterPage() {
               !breed
             }
           >
-            Transformar
+            {translate.register.button}
           </button>
         </form>
       </main>

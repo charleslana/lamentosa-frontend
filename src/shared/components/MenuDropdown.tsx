@@ -36,7 +36,6 @@ function MenuDropdown() {
             <Link to={routes.achievements}>Conquistas</Link>
             <Link to={routes.exchangeStones}>Troca de Soul Stones</Link>
             <Link to={routes.honorPoints}>Pontos de Honra</Link>
-            <Link to={routes.status}>Transformados</Link>
           </div>
         </div>
         <div className='dropdown'>

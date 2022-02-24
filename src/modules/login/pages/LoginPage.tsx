@@ -7,6 +7,7 @@ import modalService from '../../../shared/services/ModalService';
 import NavBar from '../../../shared/components/NavBar';
 import React, { useEffect, useState } from 'react';
 import routes from '../../../routes/routes';
+import translate from '../../../translate/translate';
 import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
@@ -57,9 +58,9 @@ function LoginPage() {
       <Header />
       <NavBar />
       <main>
-        <h1 className='text-center'>Entrar</h1>
+        <h1 className='text-center'>{translate.login.title}</h1>
         <form onSubmit={handleSubmit}>
-          <label>Email:</label>
+          <label>{translate.login.inputEmail}</label>
           <div>
             <input
               type='email'
@@ -67,7 +68,7 @@ function LoginPage() {
               onChange={e => setEmail(e.target.value.trim())}
             ></input>
           </div>
-          <label>Senha:</label>
+          <label>{translate.login.inputPassword}</label>
           <div>
             <input
               type='password'
@@ -76,7 +77,7 @@ function LoginPage() {
             ></input>
           </div>
           <button type='submit' disabled={!email || !password}>
-            Entrar
+            {translate.login.button}
           </button>
         </form>
       </main>
