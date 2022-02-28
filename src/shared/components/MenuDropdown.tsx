@@ -103,7 +103,7 @@ function MenuDropdown() {
           <div className='dropdown-content'>
             <Link to={routes.clan}>{translate.menuDropdown.myClan}</Link>
             <Link to={routes.clanList}>{translate.menuDropdown.clanList}</Link>
-            <Link to={routes.clanCrete}>
+            <Link to={routes.createClan}>
               {translate.menuDropdown.createClan}
             </Link>
           </div>

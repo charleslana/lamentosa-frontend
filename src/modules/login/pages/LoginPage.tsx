@@ -60,7 +60,7 @@ function LoginPage() {
       <main>
         <h1 className='text-center'>{translate.login.title}</h1>
         <form onSubmit={handleSubmit}>
-          <label>{translate.login.inputEmail}</label>
+          <label>{translate.login.emailField}</label>
           <div>
             <input
               type='email'
@@ -68,7 +68,7 @@ function LoginPage() {
               onChange={e => setEmail(e.target.value.trim())}
             ></input>
           </div>
-          <label>{translate.login.inputPassword}</label>
+          <label>{translate.login.passwordField}</label>
           <div>
             <input
               type='password'

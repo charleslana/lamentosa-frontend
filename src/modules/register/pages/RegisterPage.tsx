@@ -60,52 +60,52 @@ function RegisterPage() {
       <main>
         <h1 className='text-center'>{translate.register.title}</h1>
         <form onSubmit={handleSubmit}>
-          <label>{translate.register.inputEmail}</label>
+          <label>{translate.register.emailField}</label>
           <input
             type='email'
             value={email}
             onChange={e => setEmail(e.target.value.trim())}
           ></input>
-          <label>{translate.register.inputPassword}</label>
+          <label>{translate.register.passwordField}</label>
           <input
             type='password'
             value={password}
             onChange={e => setPassword(e.target.value)}
           ></input>
-          <label>{translate.register.inputConfirmPassword}</label>
+          <label>{translate.register.confirmPasswordField}</label>
           <input
             type='password'
             value={confirmPassword}
             onChange={e => setConfirmPassword(e.target.value)}
           ></input>
-          <label>{translate.register.inputName}</label>
+          <label>{translate.register.nameField}</label>
           <input
             type='text'
             value={name}
             onChange={e => setName(e.target.value.trim())}
           ></input>
-          <label>{translate.register.inputGender}</label>
+          <label>{translate.register.genderField}</label>
           <select value={gender} onChange={e => setGender(e.target.value)}>
             <option value='' disabled>
-              {translate.register.inputGenderOption1}
+              {translate.register.genderOptionField1}
             </option>
             <option value='Male'>
-              {translate.register.inputGenderOption2}
+              {translate.register.genderOptionField2}
             </option>
             <option value='Female'>
-              {translate.register.inputGenderOption3}
+              {translate.register.genderOptionField3}
             </option>
           </select>
-          <label>{translate.register.inputBreed}</label>
+          <label>{translate.register.breedField}</label>
           <select value={breed} onChange={e => setBreed(e.target.value)}>
             <option value='' disabled>
-              {translate.register.inputBreedOption1}
+              {translate.register.breedOptionField1}
             </option>
             <option value='Vampire'>
-              {translate.register.inputBreedOption2}
+              {translate.register.breedOptionField2}
             </option>
             <option value='Werewolf'>
-              {translate.register.inputBreedOption3}
+              {translate.register.breedOptionField3}
             </option>
           </select>
           <br />
