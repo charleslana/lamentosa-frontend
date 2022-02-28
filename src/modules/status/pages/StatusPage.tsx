@@ -18,12 +18,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 function StatusPage() {
+  const navigate = useNavigate();
   const { showLoading, hideLoading } = loaderService();
   const { showModal } = modalService();
-  const navigate = useNavigate();
-  const [userDateCreate, setUserDateCreate] = useState<Date>(
-    new Date('2022-02-17 10:00:00')
-  );
   const [formattedDate, setFormattedDate] = useState('');
   const [modalMarry, setModalMarry] = useState(false);
   const [avatar, setAvatar] = useState(1);
@@ -128,7 +125,7 @@ function StatusPage() {
 
   useEffect(() => {
     requestUserDetails();
-  }, [formattedDate, totalAttributes]);
+  }, []);
 
   const formatGender = () => {
     if (gender.toLowerCase() === 'male') {
@@ -139,8 +136,7 @@ function StatusPage() {
   };
 
   const loadData = () => {
-    setUserDateCreate(new Date('2022-02-18 10:00:00'));
-    setFormattedDate(formatDate(userDateCreate));
+    setFormattedDate(formatDate(new Date('2022-02-18 10:00:00')));
     setAvatar(1);
     setBreed('Vampire');
     setLevel(1);
