@@ -86,7 +86,7 @@ function StatusPage() {
   const [lostGoldRanking, setLostGoldRanking] = useState(0);
   const [tormentusPoints, setTormentusPoints] = useState(0);
   const [tormentusPointsRanking, setTormentusPointsRanking] = useState(0);
-  const [limitCombat, setLimitCombat] = useState(0);
+  const [combatLimit, setCombatLimit] = useState(0);
 
   const dataItems: IItem[] = [
     {
@@ -184,7 +184,7 @@ function StatusPage() {
     setLostGoldRanking(0);
     setTormentusPoints(0);
     setTormentusPointsRanking(0);
-    setLimitCombat(0);
+    setCombatLimit(30);
   };
 
   const requestUserDetails = async () => {
@@ -335,7 +335,9 @@ function StatusPage() {
                 <div className='wrapper tooltip'>
                   <span className='combat'></span> {combat}
                   <span className='tooltip-text'>
-                    {translate.status.tooltipCombat}
+                    {translate.formatString(translate.status.tooltipCombat, {
+                      limit: combatLimit,
+                    })}
                   </span>
                 </div>
                 <div className='wrapper tooltip'>

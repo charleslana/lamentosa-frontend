@@ -459,7 +459,7 @@ const translate = new LocalizedStrings({
       tooltipPower:
         'Poder de Luta: Baseado em suas habilidades desconsiderando equipamentos.',
       tooltipCombat:
-        'Combatividade: Número de vitórias contra a raça inimiga nas últimas 24 horas. Ajuda seu clã a reduzir o custo no treino de atributos. Limit: {limit}',
+        'Combatividade: Número de vitórias contra a raça inimiga nas últimas 24 horas. Ajuda seu clã a reduzir o custo no treino de atributos. Limite: {limit}',
       tooltipGrimoire:
         'Vitórias do Grimório: Usado para aprender magias após o nível 10.',
       experience: 'Experiência',
