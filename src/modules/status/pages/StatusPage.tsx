@@ -12,6 +12,7 @@ import modalService from '../../../shared/services/ModalService';
 import React, { useEffect } from 'react';
 import routes from '../../../routes/routes';
 import Train from '../components/Train';
+import translate from '../../../translate/translate';
 import userDetailsService from '../services/UserDetailsService';
 import { formatDate, formatNumber } from '../../../shared/utils/Utils';
 import { Link, useNavigate } from 'react-router-dom';
@@ -85,6 +86,7 @@ function StatusPage() {
   const [lostGoldRanking, setLostGoldRanking] = useState(0);
   const [tormentusPoints, setTormentusPoints] = useState(0);
   const [tormentusPointsRanking, setTormentusPointsRanking] = useState(0);
+  const [limitCombat, setLimitCombat] = useState(0);
 
   const dataItems: IItem[] = [
     {
@@ -182,6 +184,7 @@ function StatusPage() {
     setLostGoldRanking(0);
     setTormentusPoints(0);
     setTormentusPointsRanking(0);
+    setLimitCombat(0);
   };
 
   const requestUserDetails = async () => {
@@ -264,11 +267,16 @@ function StatusPage() {
             <Link to={routes.status}>First Mother - elder</Link>
           </p>
         </div>
-        <h1 className='title text-center text-bold'>Detalhes</h1>
+        <h1 className='title text-center text-bold'>
+          {translate.status.details}
+        </h1>
         <p className='sub-title text-center'>Amaldiçoado Comum</p>
         <div className='text-center'>
           <span className='uppercase'>
-            Transformou-se em vampiro em {formattedDate}
+            {translate.formatString(translate.status.transformDate, {
+              breed: breed,
+              date: formattedDate,
+            })}
           </span>
           <br />
           <span className='cursor-pointer' onClick={showMarry}>
@@ -314,28 +322,26 @@ function StatusPage() {
                 <div className='wrapper tooltip'>
                   <span className='icon-gold'></span>{' '}
                   <span className='gold'>{formatNumber(gold)}</span>
-                  <span className='tooltip-text'>Seu ouro</span>
+                  <span className='tooltip-text'>
+                    {translate.status.tooltipGold}
+                  </span>
                 </div>
                 <div className='wrapper tooltip'>
                   <span className='power'></span> {formatNumber(power)}
                   <span className='tooltip-text'>
-                    Poder de Luta: Baseado em suas habilidades desconsiderando
-                    equipamentos.
+                    {translate.status.tooltipPower}
                   </span>
                 </div>
                 <div className='wrapper tooltip'>
                   <span className='combat'></span> {combat}
                   <span className='tooltip-text'>
-                    Combatividade: Número de vitórias contra a raça inimiga nas
-                    últimas 24 horas. Ajuda seu clã a reduzir o custo no treino
-                    de atributos. Limit: 30
+                    {translate.status.tooltipCombat}
                   </span>
                 </div>
                 <div className='wrapper tooltip'>
                   <span className='grimoire'></span> {formatNumber(grimoire)}
                   <span className='tooltip-text'>
-                    Vitórias do Grimório: Usado para aprender magias após o
-                    nível 10.
+                    {translate.status.tooltipGrimoire}
                   </span>
                 </div>
               </div>
@@ -401,7 +407,7 @@ function StatusPage() {
           </div>
           <div className='d-block'>
             <div className='attributes'>
-              <h4>Experiência</h4>
+              <h4>{translate.status.experience}</h4>
               <div className='bar'>
                 <div
                   className='progress bar-blue'
@@ -411,7 +417,7 @@ function StatusPage() {
                   {formatNumber(minExp)} / {formatNumber(maxExp)}
                 </p>
               </div>
-              <h4>Vida</h4>
+              <h4>{translate.status.life}</h4>
               <div className='bar'>
                 <div
                   className='progress bar-red'
@@ -422,9 +428,9 @@ function StatusPage() {
                 </p>
               </div>
               <h4 className='tooltip'>
-                Força
+                {translate.status.force}
                 <span className='tooltip-text text-bold'>
-                  Melhora o dano de seu ataque
+                  {translate.status.tooltipForce}
                 </span>
               </h4>
               <div className='bar'>
@@ -435,9 +441,9 @@ function StatusPage() {
                 <p>{formatNumber(force)}</p>
               </div>
               <h4 className='tooltip'>
-                Defesa
+                {translate.status.defense}
                 <span className='tooltip-text text-bold'>
-                  Diminuí o dano de seu inimigo
+                  {translate.status.tooltipDefense}
                 </span>
               </h4>
               <div className='bar'>
@@ -448,9 +454,9 @@ function StatusPage() {
                 <p>{formatNumber(defense)}</p>
               </div>
               <h4 className='tooltip'>
-                Agilidade
+                {translate.status.agility}
                 <span className='tooltip-text text-bold'>
-                  Melhora a chance de acertar seu inimigo
+                  {translate.status.tooltipAgility}
                 </span>
               </h4>
               <div className='bar'>
@@ -461,9 +467,9 @@ function StatusPage() {
                 <p>{formatNumber(agility)}</p>
               </div>
               <h4 className='tooltip'>
-                Inteligência
+                {translate.status.intelligence}
                 <span className='tooltip-text text-bold'>
-                  Melhora a chance de esquivar-se de um ataque inimigo
+                  {translate.status.tooltipIntelligence}
                 </span>
               </h4>
               <div className='bar'>
@@ -474,9 +480,9 @@ function StatusPage() {
                 <p>{formatNumber(intelligence)}</p>
               </div>
               <h4 className='tooltip'>
-                Resistência
+                {translate.status.resistance}
                 <span className='tooltip-text text-bold'>
-                  Permite que você ataque por mais rodadas
+                  {translate.status.tooltipResistance}
                 </span>
               </h4>
               <div className='bar'>
@@ -488,125 +494,119 @@ function StatusPage() {
               </div>
             </div>
             <h1 className='title train text-bold' onClick={showTrain}>
-              Treino
+              {translate.status.train}
             </h1>
           </div>
         </div>
-        <h1 className='title text-bold'>Descrição</h1>
-        <p>
-          {description
-            ? description
-            : `Esse personagem não possuí uma história. Escreva algo aqui, conte-nos
-          quem és, de onde veio, quais são seus objetivos... Ou talvez você
-          queira falar sobre seus medos *sic`}
-        </p>
-        <button onClick={showDescription}>Editar</button>
-        <h1 className='title text-bold'>Estatísticas</h1>
+        <h1 className='title text-bold'>{translate.status.description}</h1>
+        <p>{description ? description : translate.status.noDescription}</p>
+        <button onClick={showDescription}>{translate.status.buttonEdit}</button>
+        <h1 className='title text-bold'>{translate.status.statistics}</h1>
         <ul className='dynamic-table'>
           <li>
-            <span>Vitórias de honra</span>
+            <span>{translate.status.honorVictories}</span>
             <span>{formatNumber(honorVictories)}</span>
             <span>
               {honorVictoriesRanking > 0
                 ? `${formatNumber(honorVictoriesRanking)}º`
                 : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
           <li>
-            <span>Total de Batalhas</span>
+            <span>{translate.status.totalBattles}</span>
             <span>{formatNumber(totalBattles)}</span>
             <span>
               {totalBattlesRanking > 0
                 ? `${formatNumber(totalBattlesRanking)}º`
                 : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
           <li>
-            <span>Batalhas Vencidas</span>
+            <span>{translate.status.battlesWon}</span>
             <span>{formatNumber(battlesWon)}</span>
             <span>
               {battlesWonRanking > 0
                 ? `${formatNumber(battlesWonRanking)}º`
                 : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
           <li>
-            <span>Batalhas Perdidas</span>
+            <span>{translate.status.lostBattles}</span>
             <span>{formatNumber(lostBattles)}</span>
             <span>
               {lostBattlesRanking > 0
                 ? `${formatNumber(lostBattlesRanking)}º`
                 : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
           <li>
-            <span>Empates</span>
+            <span>{translate.status.draws}</span>
             <span>{formatNumber(draws)}</span>
             <span>
               {drawsRanking > 0 ? `${formatNumber(drawsRanking)}º` : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
           <li>
-            <span>Danos Causados</span>
+            <span>{translate.status.damageCaused}</span>
             <span>{formatNumber(damageCaused)}</span>
             <span>
               {damageCausedRanking > 0
                 ? `${formatNumber(damageCausedRanking)}º`
                 : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
           <li>
-            <span>Danos Sofridos</span>
+            <span>{translate.status.damageSuffered}</span>
             <span>{formatNumber(damageSuffered)}</span>
             <span>
               {damageSufferedRanking > 0
                 ? `${formatNumber(damageSufferedRanking)}º`
                 : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
           <li>
-            <span>Ouro Ganho</span>
+            <span>{translate.status.goldEarned}</span>
             <span>{formatNumber(goldEarned)}</span>
             <span>
               {goldEarnedRanking > 0
                 ? `${formatNumber(goldEarnedRanking)}º`
                 : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
           <li>
-            <span>Ouro Perdido</span>
+            <span>{translate.status.lostGold}</span>
             <span>{formatNumber(lostGold)}</span>
             <span>
               {lostGoldRanking > 0 ? `${formatNumber(lostGoldRanking)}º` : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
           <li>
-            <span>Pontos Tormentus</span>
+            <span>{translate.status.tormentusPoints}</span>
             <span>{formatNumber(tormentusPoints)}</span>
             <span>
               {tormentusPointsRanking > 0
                 ? `${formatNumber(tormentusPointsRanking)}º`
                 : '-'}
               <br />
-              Ranking
+              {translate.status.ranking}
             </span>
           </li>
         </ul>
