@@ -47,6 +47,7 @@ nav button {
   font-weight: 700;
   font-size: 16px;
   margin: 0 !important;
+  padding: 2rem;
 }
 
 nav button:hover {
@@ -1043,4 +1044,8 @@ footer a {
 
 .alert strong {
   font-size: 0.85rem;
+}
+
+.active {
+  border-top: 1px solid white;
 }
