@@ -1,23 +1,31 @@
+import MarketType from '../types/MarketType';
 import React, { useState } from 'react';
 import TypeMarketEnum from '../enum/TypeMarketEnum';
 
-function TabBarMarket() {
-  const [active, setActive] = useState(TypeMarketEnum.All as string);
+type IProps = {
+  tabFunction: (type: TypeMarketEnum) => void;
+};
 
-  type marketType = keyof typeof TypeMarketEnum;
+function TabBarMarket(props: IProps) {
+  const [active, setActive] = useState<MarketType>(
+    Object.keys(TypeMarketEnum)[
+      Object.values(TypeMarketEnum).indexOf(TypeMarketEnum.Featured)
+    ] as MarketType
+  );
 
-  const changeActive = (type: marketType) => {
+  const changeActive = (type: MarketType) => {
     setActive(type);
+    props.tabFunction(TypeMarketEnum[type]);
   };
 
   return (
     <>
       <nav>
-        {Object.values(TypeMarketEnum).map(value => (
+        {Object.entries(TypeMarketEnum).map(([key, value]) => (
           <button
-            key={value}
-            className={value == active ? 'active' : ''}
-            onClick={() => changeActive(value as marketType)}
+            key={key}
+            className={key === active ? 'active' : ''}
+            onClick={() => changeActive(key as MarketType)}
           >
             {value}
           </button>

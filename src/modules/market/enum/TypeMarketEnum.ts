@@ -1,5 +1,5 @@
 enum TypeMarketEnum {
-  All = 'Todos',
+  Featured = 'Destaque',
   Head = 'Cabeça',
   Neck = 'Pescoço',
   Torso = 'Torso',

@@ -1,4 +1,4 @@
-import IItem from '../interfaces/IItem';
+import IItem from '../../../shared/interfaces/IItem';
 import React from 'react';
 import { formatNumber } from '../../../shared/utils/Utils';
 

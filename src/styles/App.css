@@ -1049,3 +1049,47 @@ footer a {
 .active {
   border-top: 1px solid white;
 }
+
+.market-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.market-items-bg {
+  background-image: url(../images/layout/market_item_bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 214px;
+  height: 257px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.market-item {
+  width: 180px;
+  height: 135px;
+}
+
+.market-items h3 {
+  color: #9c5f23;
+  font-weight: 700;
+  border-bottom: 0;
+  margin-bottom: 0;
+  font-family: 'Cinzel Decorative', sans-serif;
+}
+
+.market-items p {
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.market-items span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}

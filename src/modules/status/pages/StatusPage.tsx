@@ -2,7 +2,7 @@ import CustomModal from '../../../shared/components/CustomModal';
 import Description from '../components/Description';
 import Footer from '../../../shared/components/Footer';
 import Header from '../../../shared/components/Header';
-import IItem from '../interfaces/IItem';
+import IItem from '../../../shared/interfaces/IItem';
 import InfoItem from '../components/InfoItem';
 import ItemSlotEnum from '../../../shared/enum/ItemSlotEnum';
 import loaderService from '../../../shared/services/LoaderService';

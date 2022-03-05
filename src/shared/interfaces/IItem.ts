@@ -1,4 +1,5 @@
-import ItemSlotEnum from '../../../shared/enum/ItemSlotEnum';
+import ItemRarityEnum from '../enum/ItemRarityEnum';
+import ItemSlotEnum from '../enum/ItemSlotEnum';
 
 interface IItem {
   id?: number;
@@ -16,6 +17,7 @@ interface IItem {
     resistance: number;
   };
   slot: ItemSlotEnum;
+  rarity?: ItemRarityEnum;
 }
 
 export default IItem;
