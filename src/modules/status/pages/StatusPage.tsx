@@ -235,6 +235,7 @@ function StatusPage() {
     setModalTrain(!modalTrain);
     if (modalTrain) {
       console.log('callback');
+      requestUserDetails();
     }
   };
 

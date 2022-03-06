@@ -1093,3 +1093,7 @@ footer a {
   font-size: 0.9rem;
   font-weight: 700;
 }
+
+.float-right {
+  float: right;
+}
