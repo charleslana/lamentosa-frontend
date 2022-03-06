@@ -128,7 +128,9 @@ function MarketPage() {
           {marketList
             ?.filter(
               market =>
-                market.type === filter || market.item.rarity?.includes(filter)
+                market.type === filter ||
+                market.item.rarity?.includes(filter) ||
+                market.item.slot.includes(filter)
             )
             .map(market => (
               <div key={market.item.id} onClick={() => setMarket(market)}>
