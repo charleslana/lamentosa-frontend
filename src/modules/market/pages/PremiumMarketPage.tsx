@@ -193,7 +193,7 @@ function PremiumMarketPage() {
   }, []);
 
   const loadData = () => {
-    setCrystal(0);
+    setCrystal(10);
     setMarketList(dataMarketPremium);
   };
 

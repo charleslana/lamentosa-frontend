@@ -69,7 +69,12 @@ function InfoMarketPremium(props: IMarket) {
           </p>
         </div>
       </div>
-      <button className='float-right'>Comprar</button>
+      <button
+        className='float-right'
+        disabled={props.crystal < props.marketPremium.price}
+      >
+        Comprar
+      </button>
     </>
   );
 }
