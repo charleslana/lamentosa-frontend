@@ -1,5 +1,5 @@
 import IMarketPremium from '../interfaces/IMarketPremium';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { formatNumber } from '../../../shared/utils/Utils';
 
 interface IMarket {
@@ -8,6 +8,17 @@ interface IMarket {
 }
 
 function InfoMarketPremium(props: IMarket) {
+  const [discountPrice, setDiscountPrice] = useState(props.marketPremium.price);
+
+  useEffect(() => {
+    if (props.marketPremium.discount) {
+      setDiscountPrice(
+        props.marketPremium.price -
+          (props.marketPremium.price * props.marketPremium.discount) / 100
+      );
+    }
+  }, []);
+
   return (
     <>
       <h3>Comprar {props.marketPremium.name}</h3>
@@ -53,14 +64,7 @@ function InfoMarketPremium(props: IMarket) {
             {props.marketPremium.discount ? (
               <>
                 Preço VIP:{' '}
-                <span className='crystal'>
-                  {formatNumber(
-                    props.marketPremium.price -
-                      (props.marketPremium.price *
-                        props.marketPremium.discount) /
-                        100
-                  )}
-                </span>{' '}
+                <span className='crystal'>{formatNumber(discountPrice)}</span>{' '}
                 <span className='icon-crystal'></span> cristais de sangue
               </>
             ) : (
@@ -69,10 +73,7 @@ function InfoMarketPremium(props: IMarket) {
           </p>
         </div>
       </div>
-      <button
-        className='float-right'
-        disabled={props.crystal < props.marketPremium.price}
-      >
+      <button className='float-right' disabled={props.crystal < discountPrice}>
         Comprar
       </button>
     </>
