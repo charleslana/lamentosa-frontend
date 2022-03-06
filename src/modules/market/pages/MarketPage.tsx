@@ -15,6 +15,7 @@ import { formatNumber } from '../../../shared/utils/Utils';
 function MarketPage() {
   const [filter, setFilter] = useState<TypeMarketEnum>(TypeMarketEnum.Featured);
   const [modal, setModal] = useState(false);
+  const [marketList, setMarketList] = useState<IMarket[]>();
   const [item, setItem] = useState<IItem>();
   const [seller, setSeller] = useState('');
   const [gold, setGold] = useState(0);
@@ -92,6 +93,7 @@ function MarketPage() {
   const loadData = () => {
     setGold(6000);
     setCrystal(0);
+    setMarketList(dataMarket);
   };
 
   const requestMarket = async () => {
@@ -117,16 +119,14 @@ function MarketPage() {
       <main className='content'>
         <h1 className='title text-center text-bold'>Mercado</h1>
         <TabBarMarket tabFunction={type => changeTab(type)} />
-        <div className='text-center'>
-          <small>
-            As vezes "O Fantasma" um velho mercador, coloca novos produtos aqui.
-            Você pode também esperar até um vampiro ou lobisomem colocar algo à
-            venda
-          </small>
-        </div>
+        <small className='d-block text-center'>
+          As vezes "O Fantasma" um velho mercador, coloca novos produtos aqui.
+          Você pode também esperar até um vampiro ou lobisomem colocar algo à
+          venda
+        </small>
         <div className='market-items'>
-          {dataMarket
-            .filter(
+          {marketList
+            ?.filter(
               market =>
                 market.type === filter || market.item.rarity?.includes(filter)
             )

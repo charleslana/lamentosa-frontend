@@ -5,6 +5,7 @@
 @import url(avatar.css);
 @import url(items.css);
 @import url(spells.css);
+@import url(items-premium.css);
 
 header {
   width: 100%;
@@ -1096,4 +1097,12 @@ footer a {
 
 .float-right {
   float: right;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
