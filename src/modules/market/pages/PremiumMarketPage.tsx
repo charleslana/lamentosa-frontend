@@ -22,6 +22,7 @@ function PremiumMarketPage() {
         'Haste Potion cancela o tempo de espera (cooldown) em batalhas contra criaturas e inimigos instantaneamente. Pode ser usada em todas as caças à criatuas e em 30 combates contra inimigos por dia.',
       quantity: 1,
       price: 4,
+      discount: 20,
     },
     {
       id: 2,
@@ -58,6 +59,132 @@ function PremiumMarketPage() {
         'Haste Potion cancela o tempo de espera (cooldown) em batalhas contra criaturas e inimigos instantaneamente. Pode ser usada em todas as caças à criatuas e em 30 combates contra inimigos por dia.',
       quantity: 192,
       price: 768,
+    },
+    {
+      id: 6,
+      name: 'Grimoire Boost 1',
+      image: 6,
+      description:
+        'Grimoire Boost garante pontos de grimório duplos pelos próximos ataques.',
+      quantity: 30,
+      price: 30,
+    },
+    {
+      id: 7,
+      name: 'Grimoire Boost 2',
+      image: 7,
+      description:
+        'Grimoire Boost garante pontos de grimório duplos pelos próximos ataques.',
+      quantity: 60,
+      price: 60,
+    },
+    {
+      id: 8,
+      name: 'Grimoire Boost 3',
+      image: 8,
+      description:
+        'Grimoire Boost garante pontos de grimório duplos pelos próximos ataques.',
+      quantity: 120,
+      price: 120,
+    },
+    {
+      id: 9,
+      name: 'Grimoire Boost 4',
+      image: 9,
+      description:
+        'Grimoire Boost garante pontos de grimório duplos pelos próximos ataques.',
+      quantity: 240,
+      price: 240,
+    },
+    {
+      id: 10,
+      name: 'PVE XP Boost 1',
+      image: 10,
+      description:
+        'PvE XP Boost fornece o dobro de experiência somente contra Criaturas para os próximos ataques.',
+      quantity: 6,
+      price: 18,
+    },
+    {
+      id: 11,
+      name: 'PVE XP Boost 2',
+      image: 11,
+      description:
+        'PvE XP Boost fornece o dobro de experiência somente contra Criaturas para os próximos ataques.',
+      quantity: 12,
+      price: 36,
+    },
+    {
+      id: 12,
+      name: 'PVE XP Boost 3',
+      image: 12,
+      description:
+        'PvE XP Boost fornece o dobro de experiência somente contra Criaturas para os próximos ataques.',
+      quantity: 24,
+      price: 72,
+    },
+    {
+      id: 13,
+      name: 'PVE XP Boost 4',
+      image: 13,
+      description:
+        'PvE XP Boost fornece o dobro de experiência somente contra Criaturas para os próximos ataques.',
+      quantity: 96,
+      price: 288,
+    },
+    {
+      id: 14,
+      name: 'PvE XP (X3)',
+      image: 14,
+      description:
+        'PvE XP (X3) fornece o triplo de experiência somente contra Criaturas para os próximos ataques.',
+      quantity: 96,
+      price: 438,
+    },
+    {
+      id: 15,
+      name: 'Boss Pack 1',
+      image: 15,
+      description: 'Contém green soul stones.',
+      quantity: 3,
+      price: 36,
+      gold: 5650,
+    },
+    {
+      id: 16,
+      name: 'Boss Pack 2',
+      image: 16,
+      description: 'Contém green soul stones.',
+      quantity: 5,
+      price: 60,
+      gold: 7909,
+    },
+    {
+      id: 17,
+      name: 'Boss Pack 3',
+      image: 17,
+      description: 'Contém green soul stones.',
+      quantity: 7,
+      price: 84,
+      gold: 10170,
+    },
+    {
+      id: 18,
+      name: 'Boss Pack 4',
+      image: 18,
+      description: 'Contém green soul stones.',
+      quantity: 10,
+      price: 120,
+      gold: 11300,
+    },
+    {
+      id: 19,
+      name: 'Boss Pack 5',
+      image: 19,
+      description: 'Contém green soul stones.',
+      quantity: 35,
+      price: 360,
+      gold: 15819,
     },
   ];
 

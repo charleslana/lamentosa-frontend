@@ -30,6 +30,17 @@ function InfoMarketPremium(props: IMarket) {
         <div>
           <p className='text-bold'>
             Quantidade: {formatNumber(props.marketPremium.quantity)}
+            {props.marketPremium.gold ? (
+              <>
+                &nbsp;+ <span className='icon-gold'></span>
+                <span className='gold'>
+                  {' '}
+                  {formatNumber(props.marketPremium.gold)}
+                </span>
+              </>
+            ) : (
+              ''
+            )}
           </p>
           <p className='text-bold'>
             Preço:{' '}
@@ -39,11 +50,22 @@ function InfoMarketPremium(props: IMarket) {
             <span className='icon-crystal'></span> cristais de sangue
           </p>
           <p className='text-bold'>
-            Preço VIP:{' '}
-            <span className='crystal'>
-              {formatNumber(props.marketPremium.price)}
-            </span>{' '}
-            <span className='icon-crystal'></span> cristais de sangue
+            {props.marketPremium.discount ? (
+              <>
+                Preço VIP:{' '}
+                <span className='crystal'>
+                  {formatNumber(
+                    props.marketPremium.price -
+                      (props.marketPremium.price *
+                        props.marketPremium.discount) /
+                        100
+                  )}
+                </span>{' '}
+                <span className='icon-crystal'></span> cristais de sangue
+              </>
+            ) : (
+              ''
+            )}
           </p>
         </div>
       </div>

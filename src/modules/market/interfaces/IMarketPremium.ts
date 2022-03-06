@@ -6,6 +6,7 @@ interface IMarketPremium {
   quantity: number;
   price: number;
   gold?: number;
+  discount?: number;
 }
 
 export default IMarketPremium;
