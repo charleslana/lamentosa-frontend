@@ -240,6 +240,10 @@ footer a {
   display: block !important;
 }
 
+.d-inline {
+  display: inline;
+}
+
 .loading-overlay {
   position: fixed;
   top: 0;
@@ -1015,23 +1019,23 @@ footer a {
 }
 
 .green {
-  color: green;
+  color: green !important;
 }
 
 .yellow {
-  color: #ff0;
+  color: #ff0 !important;
 }
 
 .orange {
-  color: orange;
+  color: orange !important;
 }
 
 .blue {
-  color: #8b8bff;
+  color: #8b8bff !important;
 }
 
 .red {
-  color: red;
+  color: red !important;
 }
 
 .alert h3 {
@@ -1105,4 +1109,25 @@ footer a {
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+.blacksmith-image {
+  background-image: url(../images/layout/blacksmith.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 310px;
+  height: 465px;
+  filter: grayscale(20%) brightness(150%);
+}
+
+.blacksmith-box {
+  background: #262626;
+  padding: 20px 10px;
+  flex-grow: 0.4;
+}
+
+.blacksmith-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
