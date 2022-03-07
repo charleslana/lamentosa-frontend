@@ -1,7 +1,8 @@
+import IBlacksmith from '../interfaces/IBlacksmith';
 import React, { useState } from 'react';
 import { formatNumber } from '../../../shared/utils/Utils';
 
-function InfoBlacksmith() {
+function InfoBlacksmith(props: IBlacksmith) {
   const [pay, setPay] = useState('');
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -15,43 +16,52 @@ function InfoBlacksmith() {
 
   return (
     <>
-      <h3>Melhorar Simple Blade</h3>
-      <p className='uppercase'>Nível atual: 1</p>
+      <h3>Melhorar {props.item.name}</h3>
+      <p className='uppercase'>Nível atual: {props.item.upgrade}</p>
       <div className='flex'>
         <div className='info-blacksmith'>
           <h5>Custos</h5>
           <p>
-            * {formatNumber(21)} pontos de grimório OU {formatNumber(7)}{' '}
+            * {formatNumber(props.cost.grimoire)} pontos de grimório OU{' '}
+            {formatNumber(props.cost.crystal)}{' '}
             <span className='icon-crystal'></span> cristais de sangue.
           </p>
-          <p>
-            * <b className='green'>{formatNumber(11)} Green</b> Soul Stones.
-          </p>
+          {props.cost.greenStone > 0 ? (
+            <p>
+              *{' '}
+              <b className='green'>
+                {formatNumber(props.cost.greenStone)} Green
+              </b>{' '}
+              Soul Stones.
+            </p>
+          ) : (
+            ''
+          )}
         </div>
         <div className='info-blacksmith'>
           <h5>Os atributos serão melhorados em {formatNumber(9)}%</h5>
           <small className='d-block'>
-            Vida: {formatNumber(0)} [
+            Vida: {formatNumber(props.item.attributes.life)} [
             <b className='green'>+{formatNumber(0)} pontos</b>]
           </small>
           <small className='d-block'>
-            Força: {formatNumber(5)} [
+            Força: {formatNumber(props.item.attributes.force)} [
             <b className='green'>+{formatNumber(1)} pontos</b>]
           </small>
           <small className='d-block'>
-            Defesa: {formatNumber(0)} [
+            Defesa: {formatNumber(props.item.attributes.defense)} [
             <b className='green'>+{formatNumber(0)} pontos</b>]
           </small>
           <small className='d-block'>
-            Agilidade: {formatNumber(0)} [
+            Agilidade: {formatNumber(props.item.attributes.agility)} [
             <b className='green'>+{formatNumber(0)} pontos</b>]
           </small>
           <small className='d-block'>
-            Inteligência: {formatNumber(0)} [
+            Inteligência: {formatNumber(props.item.attributes.intelligence)} [
             <b className='green'>+{formatNumber(0)} pontos</b>]
           </small>
           <small className='d-block'>
-            Resistência: {formatNumber(0)} [
+            Resistência: {formatNumber(props.item.attributes.resistance)} [
             <b className='green'>+{formatNumber(0)} pontos</b>]
           </small>
         </div>
