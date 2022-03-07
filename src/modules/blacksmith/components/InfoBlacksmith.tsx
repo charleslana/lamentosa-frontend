@@ -16,13 +16,6 @@ function InfoBlacksmith() {
   return (
     <>
       <h3>Melhorar Simple Blade</h3>
-      <p>
-        Você possui <span className='crystal'>{formatNumber(0)}</span>{' '}
-        <span className='icon-crystal'></span> cristais de sangue
-      </p>
-      <p className='text-bold mb-2'>
-        Você possui {formatNumber(0)} pontos de grimoire
-      </p>
       <p className='uppercase'>Nível atual: 1</p>
       <div className='flex'>
         <div className='info-blacksmith'>
