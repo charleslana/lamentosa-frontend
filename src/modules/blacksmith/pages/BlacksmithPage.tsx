@@ -1,10 +1,76 @@
+import CustomModal from '../../../shared/components/CustomModal';
 import Footer from '../../../shared/components/Footer';
 import Header from '../../../shared/components/Header';
+import IItem from '../../../shared/interfaces/IItem';
+import InfoBlacksmith from '../components/InfoBlacksmith';
+import ItemSlotEnum from '../../../shared/enum/ItemSlotEnum';
 import MenuDropdown from '../../../shared/components/MenuDropdown';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TabBarBlacksmith from '../components/TabBarBlacksmith';
 
 function BlacksmithPage() {
+  const [modal, setModal] = useState(false);
+  const [items, setItems] = useState<IItem[]>();
+  const [item, setItem] = useState<IItem>();
+
+  const dataItems: IItem[] = [
+    {
+      id: 1,
+      isEquip: false,
+      name: 'Simple Blade',
+      upgrade: 1,
+      image: 1,
+      level: 1,
+      attributes: {
+        life: 0,
+        force: 5,
+        defense: 0,
+        agility: 1,
+        intelligence: 0,
+        resistance: 0,
+      },
+      slot: ItemSlotEnum.Hand,
+    },
+    {
+      id: 2,
+      isEquip: true,
+      name: 'Chain Helmet',
+      upgrade: 1,
+      image: 4,
+      level: 1,
+      attributes: {
+        life: 0,
+        force: 0,
+        defense: 0,
+        agility: 0,
+        intelligence: 6,
+        resistance: 0,
+      },
+      slot: ItemSlotEnum.Head,
+    },
+  ];
+
+  useEffect(() => {
+    requestBlacksmith();
+  }, []);
+
+  const loadData = () => {
+    setItems(dataItems);
+  };
+
+  const requestBlacksmith = async () => {
+    loadData();
+  };
+
+  const setBlacksmith = (item: IItem) => {
+    setItem(item);
+    showInfoBlacksmith();
+  };
+
+  const showInfoBlacksmith = () => {
+    setModal(!modal);
+  };
+
   return (
     <>
       <Header />
@@ -43,13 +109,29 @@ function BlacksmithPage() {
             <br />
             <h4>Selecione um item para melhorar</h4>
             <div className='flex'>
-              <div className='inventory-slot'>
-                <div className='item cursor-pointer item-1'></div>
-              </div>
+              {items?.map(item => (
+                <div
+                  key={item.id}
+                  className='inventory-slot'
+                  onClick={() => setBlacksmith(item)}
+                >
+                  <div
+                    className={`item cursor-pointer item-${item.image}`}
+                  ></div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </main>
+      {modal ? (
+        <CustomModal
+          children={<InfoBlacksmith />}
+          showModal={showInfoBlacksmith}
+        />
+      ) : (
+        ''
+      )}
       <Footer />
     </>
   );
