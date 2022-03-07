@@ -417,6 +417,10 @@ footer a {
   background-size: contain;
 }
 
+.content {
+  word-wrap: break-word;
+}
+
 .content p {
   line-height: 1.5;
   color: white;
